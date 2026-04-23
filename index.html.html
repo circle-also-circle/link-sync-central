@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Link-Sync Central — Global Launch Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0f11;
+    --bg2: #141519;
+    --bg3: #1a1c22;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --text: #e8e9ec;
+    --text2: #8a8d97;
+    --text3: #555860;
+    --green: #1fcf8e;
+    --green-dim: rgba(31,207,142,0.12);
+    --amber: #f5a623;
+    --amber-dim: rgba(245,166,35,0.12);
+    --red: #f05252;
+    --red-dim: rgba(240,82,82,0.12);
+    --blue: #4d9fff;
+    --blue-dim: rgba(77,159,255,0.12);
+    --purple: #a78bfa;
+    --purple-dim: rgba(167,139,250,0.12);
+    --font: 'DM Sans', sans-serif;
+    --mono: 'DM Mono', monospace;
+    --radius: 10px;
+    --radius-sm: 6px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* ── scrollbar ── */
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+
+  /* ── header ── */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(14,15,17,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 28px;
+    height: 56px;
+    display: flex; align-items: center; gap: 20px;
+  }
+
+  .logo {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 500; font-size: 14px; letter-spacing: -0.2px;
+    white-space: nowrap;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 26px; height: 26px;
+    border-radius: 7px;
+    background: var(--green);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .logo-icon::after {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #0e0f11;
+    position: absolute;
+  }
+
+  .pulse-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(31,207,142,0.4); }
+    50% { opacity: 0.6; box-shadow: 0 0 0 6px rgba(31,207,142,0); }
+  }
+
+  .live-badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--green);
+    background: var(--green-dim);
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(31,207,142,0.2);
+  }
+
+  .header-spacer { flex: 1; }
+
+  .header-meta {
+    font-size: 12px;
+    color: var(--text3);
+    font-family: var(--mono);
+  }
+
+  .input-wrap {
+    flex: 1;
+    max-width: 440px;
+    position: relative;
+  }
+
+  .url-input {
+    width: 100%;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 7px 12px 7px 34px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-family: var(--font);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  .url-input::placeholder { color: var(--text3); }
+  .url-input:focus { border-color: var(--green); }
+
+  .input-prefix {
+    position: absolute; left: 11px; top: 50%; transform: translateY(-50%);
+    color: var(--text3); font-size: 13px; pointer-events: none;
+  }
+
+  .parse-btn {
+    background: var(--green);
+    color: #0e0f11;
+    border: none;
+    padding: 7px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: var(--font);
+    transition: opacity 0.15s, transform 0.1s;
+  }
+
+  .parse-btn:hover { opacity: 0.85; }
+  .parse-btn:active { transform: scale(0.97); }
+
+  /* ── main layout ── */
+  main {
+    padding: 24px 28px;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* ── stat row ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .stat-card:hover { border-color: var(--border2); }
+
+  .stat-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .stat-card.c-green::before { background: var(--green); }
+  .stat-card.c-amber::before { background: var(--amber); }
+  .stat-card.c-red::before { background: var(--red); }
+  .stat-card.c-blue::before { background: var(--blue); }
+
+  .stat-label { font-size: 11px; color: var(--text2); margin-bottom: 6px; letter-spacing: 0.3px; }
+  .stat-value { font-size: 28px; font-weight: 300; letter-spacing: -1px; line-height: 1; }
+  .stat-value.green { color: var(--green); }
+  .stat-value.amber { color: var(--amber); }
+  .stat-value.red { color: var(--red); }
+  .stat-sub { font-size: 11px; color: var(--text3); margin-top: 6px; font-family: var(--mono); }
+
+  /* ── progress mini bar ── */
+  .prog-bg {
+    height: 3px; background: rgba(255,255,255,0.06);
+    border-radius: 2px; margin-top: 10px; overflow: hidden;
+  }
+  .prog-fill {
+    height: 100%; border-radius: 2px;
+    background: var(--green);
+    transition: width 1.2s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  /* ── 2-col layout ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 16px;
+  }
+
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  /* ── card ── */
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    transition: border-color 0.2s;
+  }
+
+  .card:hover { border-color: var(--border2); }
+
+  .card-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  .card-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  .card-count {
+    font-size: 11px;
+    color: var(--text3);
+    font-family: var(--mono);
+  }
+
+  /* ── readiness ── */
+  .readiness-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  .region-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 8px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .region-card:hover {
+    border-color: var(--border2);
+    background: rgba(255,255,255,0.03);
+  }
+
+  .region-name {
+    font-size: 10px; font-family: var(--mono);
+    color: var(--text3); margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .region-pct {
+    font-size: 22px; font-weight: 300;
+    letter-spacing: -0.5px; line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .region-bar-bg {
+    height: 3px; background: rgba(255,255,255,0.06);
+    border-radius: 2px; overflow: hidden;
+  }
+  .region-bar-fill { height: 100%; border-radius: 2px; transition: width 1.2s cubic-bezier(0.16,1,0.3,1); }
+
+  .region-launch {
+    font-size: 9px; color: var(--text3);
+    font-family: var(--mono); margin-top: 6px;
+  }
+
+  /* ── link feed ── */
+  .feed-list {
+    display: flex; flex-direction: column; gap: 6px;
+    max-height: 320px; overflow-y: auto;
+    padding-right: 2px;
+  }
+
+  .feed-item {
+    display: grid;
+    grid-template-columns: 30px 1fr auto;
+    gap: 10px;
+    align-items: start;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--bg3);
+    cursor: pointer;
+    transition: border-color 0.15s;
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .feed-item:hover { border-color: var(--border2); }
+
+  .svc-icon {
+    width: 28px; height: 28px;
+    border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 500;
+    font-family: var(--mono);
+    flex-shrink: 0;
+  }
+
+  .feed-title {
+    font-size: 12px; font-weight: 500;
+    color: var(--text); margin-bottom: 3px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    max-width: 360px;
+  }
+
+  .feed-meta {
+    font-size: 11px; color: var(--text3);
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+
+  .feed-tags {
+    display: flex; gap: 4px; flex-wrap: wrap;
+    justify-content: flex-end; align-items: flex-start;
+  }
+
+  .tag {
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--mono);
+    white-space: nowrap;
+    border: 1px solid transparent;
+  }
+
+  .tag-asana { background: rgba(245,166,35,0.12); color: var(--amber); border-color: rgba(245,166,35,0.2); }
+  .tag-notion { background: rgba(167,139,250,0.12); color: var(--purple); border-color: rgba(167,139,250,0.2); }
+  .tag-github { background: rgba(138,141,151,0.12); color: var(--text2); border-color: rgba(138,141,151,0.2); }
+  .tag-figma { background: rgba(240,82,82,0.1); color: #f87171; border-color: rgba(240,82,82,0.2); }
+  .tag-jira { background: var(--blue-dim); color: var(--blue); border-color: rgba(77,159,255,0.2); }
+
+  .tag-na { background: rgba(31,207,142,0.08); color: var(--green); }
+  .tag-eu { background: var(--blue-dim); color: var(--blue); }
+  .tag-jp { background: rgba(240,82,82,0.08); color: #f87171; }
+  .tag-kr { background: rgba(167,139,250,0.08); color: var(--purple); }
+  .tag-sea { background: rgba(245,166,35,0.08); color: var(--amber); }
+
+  /* status dots */
+  .sdot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .s-done { background: var(--green); }
+  .s-progress { background: var(--amber); }
+  .s-blocked { background: var(--red); }
+  .s-todo { background: var(--text3); }
+
+  /* ── heatmap ── */
+  .heatmap {
+    display: grid;
+    grid-template-columns: 76px repeat(5, 1fr);
+    gap: 4px;
+    font-size: 11px;
+  }
+
+  .hm-hdr { text-align: center; color: var(--text3); padding: 2px 0; font-size: 10px; font-family: var(--mono); }
+  .hm-label { display: flex; align-items: center; color: var(--text2); font-size: 11px; }
+
+  .hm-cell {
+    height: 30px; border-radius: 5px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 11px; font-weight: 500;
+    cursor: pointer; transition: opacity 0.15s, transform 0.1s;
+    border: 1px solid transparent;
+  }
+  .hm-cell:hover { opacity: 0.75; transform: scale(1.06); }
+
+  /* ── link bank ── */
+  .bank-tabs {
+    display: flex; gap: 4px; flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+
+  .btab {
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text3);
+    font-family: var(--font);
+    transition: all 0.15s;
+  }
+
+  .btab:hover { color: var(--text2); border-color: var(--border2); }
+
+  .btab.active {
+    background: var(--bg3);
+    color: var(--text);
+    border-color: var(--border2);
+  }
+
+  .bank-list {
+    display: flex; flex-direction: column; gap: 4px;
+    max-height: 260px; overflow-y: auto;
+  }
+
+  .bank-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--text);
+    border: 1px solid transparent;
+    transition: border-color 0.12s, background 0.12s;
+    text-decoration: none;
+  }
+
+  .bank-item:hover { border-color: var(--border); background: var(--bg3); }
+
+  .bank-name {
+    flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+
+  /* ── toast ── */
+  #toast {
+    position: fixed; bottom: 20px; right: 20px; z-index: 999;
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius);
+    padding: 10px 16px;
+    font-size: 12px;
+    color: var(--text);
+    max-width: 300px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  #toast.show { opacity: 1; transform: translateY(0); }
+
+  /* ── new badge ── */
+  .new-badge {
+    display: inline-flex; align-items: center;
+    padding: 1px 5px;
+    background: var(--green-dim);
+    color: var(--green);
+    border-radius: 3px;
+    font-size: 9px;
+    font-family: var(--mono);
+    margin-left: 4px;
+    border: 1px solid rgba(31,207,142,0.2);
+    vertical-align: middle;
+  }
+
+  /* ── footer ── */
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    color: var(--text3);
+    font-family: var(--mono);
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  /* ── gantt simple ── */
+  .gantt-wrap { overflow-x: auto; }
+  .gantt {
+    display: grid;
+    gap: 6px;
+    min-width: 500px;
+  }
+
+  .gantt-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+  }
+
+  .gantt-label { color: var(--text3); font-family: var(--mono); }
+  .gantt-track { background: rgba(255,255,255,0.04); border-radius: 4px; height: 22px; position: relative; overflow: hidden; }
+  .gantt-bar {
+    position: absolute; top: 3px; height: 16px; border-radius: 3px;
+    display: flex; align-items: center; padding: 0 7px;
+    font-size: 10px; font-weight: 500; white-space: nowrap;
+    transition: opacity 0.2s;
+  }
+  .gantt-bar:hover { opacity: 0.8; }
+
+  /* responsive */
+  @media (max-width: 900px) {
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .three-col { grid-template-columns: 1fr; }
+    .readiness-grid { grid-template-columns: repeat(3, 1fr); }
+    main { padding: 16px; }
+    header { padding: 0 16px; gap: 10px; }
+    .input-wrap { max-width: 220px; }
+  }
+
+  @media (max-width: 600px) {
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .readiness-grid { grid-template-columns: repeat(3, 1fr); }
+    .heatmap { grid-template-columns: 60px repeat(5, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">
+    <div class="logo-icon"></div>
+    Link&#8209;Sync&nbsp;Central
+  </a>
+  <div class="pulse-dot"></div>
+  <span class="live-badge">LIVE</span>
+  <div class="header-spacer"></div>
+  <div class="input-wrap">
+    <span class="input-prefix">⌘</span>
+    <input class="url-input" id="urlInput" type="text" placeholder="작업 링크 붙여넣기 (Asana / Jira / Notion / GitHub / Figma …)">
+  </div>
+  <button class="parse-btn" onclick="parseLink()">파싱 →</button>
+  <div class="header-meta" id="lastSync">마지막 동기화: 방금 전</div>
+</header>
+
+<main>
+
+  <!-- stat row -->
+  <div class="stat-row">
+    <div class="stat-card c-green">
+      <div class="stat-label">전체 작업</div>
+      <div class="stat-value" id="totalCount">42</div>
+      <div class="stat-sub">링크 등록됨</div>
+    </div>
+    <div class="stat-card c-green">
+      <div class="stat-label">전체 완료율</div>
+      <div class="stat-value green" id="doneRate">61%</div>
+      <div class="prog-bg"><div class="prog-fill" id="overallBar" style="width:61%"></div></div>
+    </div>
+    <div class="stat-card c-red">
+      <div class="stat-label">지연 / 차단됨</div>
+      <div class="stat-value red" id="blockedCount">5</div>
+      <div class="stat-sub">critical path</div>
+    </div>
+    <div class="stat-card c-amber">
+      <div class="stat-label">글로벌 런칭까지</div>
+      <div class="stat-value amber" id="dday">D&#8209;18</div>
+      <div class="stat-sub" id="launchDate">2025.05.12 타겟</div>
+    </div>
+  </div>
+
+  <!-- readiness + gantt -->
+  <div class="two-col">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Global Readiness Score</div>
+        <span class="card-count">국가별 런칭 준비도</span>
+      </div>
+      <div class="readiness-grid" id="readinessGrid"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">런칭 타임라인</div>
+        <span class="card-count">간트 뷰</span>
+      </div>
+      <div class="gantt-wrap">
+        <div class="gantt" id="ganttChart"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- feed + heatmap -->
+  <div class="two-col">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Active Link Feed</div>
+        <span class="card-count" id="feedCount">5개 항목</span>
+      </div>
+      <div class="feed-list" id="linkFeed"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Resource Heatmap</div>
+        <span class="card-count">담당자 × 업무</span>
+      </div>
+      <div class="heatmap" id="heatmap"></div>
+    </div>
+  </div>
+
+  <!-- link bank -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">Link Bank</div>
+      <span class="card-count" id="bankCount">9개 링크</span>
+    </div>
+    <div class="bank-tabs" id="bankTabs">
+      <button class="btab active" onclick="filterBank('all',this)">전체</button>
+      <button class="btab" onclick="filterBank('기획',this)">기획</button>
+      <button class="btab" onclick="filterBank('디자인',this)">디자인</button>
+      <button class="btab" onclick="filterBank('빌드',this)">빌드</button>
+      <button class="btab" onclick="filterBank('마케팅',this)">마케팅</button>
+    </div>
+    <div class="bank-list" id="bankList"></div>
+  </div>
+
+</main>
+
+<footer>
+  Link-Sync Central &nbsp;·&nbsp; Global Launch Dashboard &nbsp;·&nbsp; <span id="footerTime"></span>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────
+const regions = [
+  { id:'NA', pct:82, launch:'05.12', color:'var(--green)' },
+  { id:'EU', pct:67, launch:'05.19', color:'var(--amber)' },
+  { id:'JP', pct:44, launch:'05.26', color:'var(--red)' },
+  { id:'KR', pct:78, launch:'05.12', color:'var(--green)' },
+  { id:'SEA', pct:55, launch:'06.02', color:'var(--amber)' },
+];
+
+const ganttRows = [
+  { label:'NA', left:0, width:55, color:'rgba(31,207,142,0.25)', text:'기획→빌드 완료', tcolor:'var(--green)' },
+  { label:'KR', left:5, width:50, color:'rgba(31,207,142,0.2)', text:'빌드·마케팅 진행중', tcolor:'var(--green)' },
+  { label:'EU', left:10, width:60, color:'rgba(245,166,35,0.2)', text:'법무 검토 지연', tcolor:'var(--amber)' },
+  { label:'SEA', left:18, width:55, color:'rgba(245,166,35,0.18)', text:'QA 시작 예정', tcolor:'var(--amber)' },
+  { label:'JP', left:22, width:65, color:'rgba(240,82,82,0.18)', text:'로컬라이징 진행중', tcolor:'var(--red)' },
+];
+
+const heatData = [
+  { name:'Jamie K.', vals:[3,1,5,2,0] },
+  { name:'Sophie M.', vals:[2,0,1,3,4] },
+  { name:'Kenji T.', vals:[1,2,6,1,0] },
+  { name:'Yuna P.', vals:[2,5,1,3,0] },
+  { name:'Arin W.', vals:[1,1,4,2,1] },
+];
+const heatCats = ['기획','디자인','개발','마케팅','법무'];
+
+function heatColor(v) {
+  if (v === 0) return ['rgba(255,255,255,0.04)','rgba(255,255,255,0.5)'];
+  if (v <= 2)  return ['rgba(31,207,142,0.12)','var(--green)'];
+  if (v <= 4)  return ['rgba(245,166,35,0.15)','var(--amber)'];
+  return ['rgba(240,82,82,0.18)','var(--red)'];
+}
+
+let feedItems = [
+  { title:'[NA] App Store 심사 제출', svc:'Asana', status:'progress', owner:'Jamie K.', region:'NA', due:'5/2', isNew:true },
+  { title:'[EU] GDPR 법무 검토 문서', svc:'Notion', status:'blocked', owner:'Sophie M.', region:'EU', due:'4/28', isNew:false },
+  { title:'[JP] i18n 로컬라이징 PR #482', svc:'GitHub', status:'progress', owner:'Kenji T.', region:'JP', due:'4/30', isNew:false },
+  { title:'[KR] 마케팅 배너 v3 디자인', svc:'Figma', status:'done', owner:'Yuna P.', region:'KR', due:'4/25', isNew:false },
+  { title:'[SEA] 결제 모듈 QA 티켓 #1029', svc:'Jira', status:'todo', owner:'Arin W.', region:'SEA', due:'5/5', isNew:false },
+];
+
+let bankItems = [
+  { title:'[NA] 서비스 기획안 v2.1', cat:'기획', svc:'Notion', status:'done', owner:'Jamie K.' },
+  { title:'[EU] UX 리서치 보고서', cat:'기획', svc:'Notion', status:'progress', owner:'Sophie M.' },
+  { title:'[KR] 로고 및 브랜딩 가이드', cat:'디자인', svc:'Figma', status:'done', owner:'Yuna P.' },
+  { title:'[JP] 앱 아이콘 시안 #3', cat:'디자인', svc:'Figma', status:'progress', owner:'Kenji T.' },
+  { title:'[NA] 결제 API 연동 PR', cat:'빌드', svc:'GitHub', status:'done', owner:'Jamie K.' },
+  { title:'[SEA] QA 회귀 테스트 시트', cat:'빌드', svc:'Jira', status:'todo', owner:'Arin W.' },
+  { title:'[JP] i18n 로컬라이징 PR', cat:'빌드', svc:'GitHub', status:'progress', owner:'Kenji T.' },
+  { title:'[KR] SNS 캠페인 플랜', cat:'마케팅', svc:'Asana', status:'done', owner:'Yuna P.' },
+  { title:'[EU] 런칭 이메일 시퀀스', cat:'마케팅', svc:'Asana', status:'blocked', owner:'Sophie M.' },
+];
+
+const svcStyle = {
+  Asana: { cls:'tag-asana', bg:'rgba(245,166,35,0.15)', fg:'#f5a623' },
+  Notion: { cls:'tag-notion', bg:'rgba(167,139,250,0.15)', fg:'#a78bfa' },
+  GitHub: { cls:'tag-github', bg:'rgba(138,141,151,0.12)', fg:'#8a8d97' },
+  Figma:  { cls:'tag-figma',  bg:'rgba(240,82,82,0.12)',  fg:'#f87171' },
+  Jira:   { cls:'tag-jira',   bg:'rgba(77,159,255,0.12)', fg:'#4d9fff' },
+};
+
+const regionTagCls = { NA:'tag-na', EU:'tag-eu', JP:'tag-jp', KR:'tag-kr', SEA:'tag-sea' };
+const statusDotCls = { done:'s-done', progress:'s-progress', blocked:'s-blocked', todo:'s-todo' };
+const statusLabel  = { done:'완료', progress:'진행중', blocked:'차단됨', todo:'대기' };
+
+// ── BUILD UI ──────────────────────────────────────────────────────────
+function buildReadiness() {
+  const el = document.getElementById('readinessGrid');
+  el.innerHTML = '';
+  regions.forEach(r => {
+    const div = document.createElement('div');
+    div.className = 'region-card';
+    div.innerHTML = `
+      <div class="region-name">${r.id}</div>
+      <div class="region-pct" style="color:${r.color}">${r.pct}%</div>
+      <div class="region-bar-bg">
+        <div class="region-bar-fill" style="width:${r.pct}%; background:${r.color}"></div>
+      </div>
+      <div class="region-launch">${r.launch} 런칭</div>
+    `;
+    div.onclick = () => showToast(`${r.id}: ${r.pct}% 준비됨 · ${r.launch} 런칭 타겟`);
+    el.appendChild(div);
+  });
+}
+
+function buildGantt() {
+  const el = document.getElementById('ganttChart');
+  el.innerHTML = '';
+  ganttRows.forEach(r => {
+    const row = document.createElement('div');
+    row.className = 'gantt-row';
+    row.innerHTML = `
+      <div class="gantt-label">${r.label}</div>
+      <div class="gantt-track">
+        <div class="gantt-bar" style="left:${r.left}%; width:${r.width}%; background:${r.color}; color:${r.tcolor}">
+          ${r.text}
+        </div>
+      </div>
+    `;
+    el.appendChild(row);
+  });
+}
+
+function buildHeatmap() {
+  const el = document.getElementById('heatmap');
+  el.innerHTML = '';
+  // headers
+  el.appendChild(document.createElement('div'));
+  heatCats.forEach(c => {
+    const h = document.createElement('div');
+    h.className = 'hm-hdr';
+    h.textContent = c;
+    el.appendChild(h);
+  });
+  heatData.forEach(row => {
+    const lbl = document.createElement('div');
+    lbl.className = 'hm-label';
+    lbl.textContent = row.name.split(' ')[0];
+    el.appendChild(lbl);
+    row.vals.forEach((v, i) => {
+      const cell = document.createElement('div');
+      cell.className = 'hm-cell';
+      const [bg, fg] = heatColor(v);
+      cell.style.background = bg;
+      cell.style.color = fg;
+      cell.textContent = v;
+      cell.title = `${row.name} / ${heatCats[i]}: ${v}건`;
+      el.appendChild(cell);
+    });
+  });
+}
+
+function renderFeed() {
+  const el = document.getElementById('linkFeed');
+  el.innerHTML = '';
+  feedItems.forEach(d => {
+    const svc = svcStyle[d.svc] || svcStyle.GitHub;
+    const item = document.createElement('div');
+    item.className = 'feed-item';
+    item.innerHTML = `
+      <div class="svc-icon" style="background:${svc.bg}; color:${svc.fg}">${d.svc.slice(0,2)}</div>
+      <div>
+        <div class="feed-title">${d.title}${d.isNew ? '<span class="new-badge">NEW</span>' : ''}</div>
+        <div class="feed-meta">
+          <span class="sdot ${statusDotCls[d.status]}"></span>
+          <span>${statusLabel[d.status]}</span>
+          <span style="color:var(--text3)">·</span>
+          <span>${d.owner}</span>
+          <span style="color:var(--text3)">·</span>
+          <span>마감 ${d.due}</span>
+        </div>
+      </div>
+      <div class="feed-tags">
+        <span class="tag ${svc.cls}">${d.svc}</span>
+        <span class="tag ${regionTagCls[d.region] || ''}">${d.region}</span>
+      </div>
+    `;
+    el.appendChild(item);
+  });
+  document.getElementById('feedCount').textContent = `${feedItems.length}개 항목`;
+}
+
+let currentFilter = 'all';
+
+function filterBank(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.btab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderBank();
+}
+
+function renderBank() {
+  const el = document.getElementById('bankList');
+  el.innerHTML = '';
+  const items = currentFilter === 'all' ? bankItems : bankItems.filter(d => d.cat === currentFilter);
+  items.forEach(d => {
+    const svc = svcStyle[d.svc] || svcStyle.GitHub;
+    const item = document.createElement('div');
+    item.className = 'bank-item';
+    item.innerHTML = `
+      <span class="sdot ${statusDotCls[d.status]}"></span>
+      <span class="bank-name">${d.title}</span>
+      <span class="tag ${svc.cls}">${d.svc}</span>
+      <span style="font-size:11px; color:var(--text3); white-space:nowrap; margin-left:4px;">${d.owner}</span>
+    `;
+    item.onclick = () => showToast(`${d.title} → ${statusLabel[d.status]}`);
+    el.appendChild(item);
+  });
+  document.getElementById('bankCount').textContent = `${items.length}개 링크`;
+}
+
+// ── PARSE LINK ────────────────────────────────────────────────────────
+const fakePool = [
+  { title:'[NA] App Store 메타데이터 업데이트', svc:'Asana', status:'todo', owner:'Jamie K.', region:'NA', due:'5/8', cat:'마케팅' },
+  { title:'[EU] 결제 PSD2 연동 완료 확인', svc:'Jira', status:'progress', owner:'Tomás R.', region:'EU', due:'5/3', cat:'빌드' },
+  { title:'[JP] 오프보딩 플로우 디자인', svc:'Figma', status:'todo', owner:'Kenji T.', region:'JP', due:'5/6', cat:'디자인' },
+  { title:'[KR] 앱스토어 스크린샷 갱신', svc:'Notion', status:'done', owner:'Yuna P.', region:'KR', due:'4/26', cat:'마케팅' },
+  { title:'[SEA] 다국어 약관 번역본 검토', svc:'GitHub', status:'blocked', owner:'Arin W.', region:'SEA', due:'4/29', cat:'기획' },
+];
+
+let parseIdx = 0;
+
+function parseLink() {
+  const val = document.getElementById('urlInput').value.trim();
+  if (!val) { showToast('URL을 먼저 입력해 주세요.'); return; }
+  showToast('⏳ 링크 분석 중…');
+
+  setTimeout(() => {
+    const d = fakePool[parseIdx % fakePool.length];
+    parseIdx++;
+
+    // prepend to feed
+    d.isNew = true;
+    feedItems.unshift(d);
+    if (feedItems.length > 10) feedItems.pop();
+    renderFeed();
+
+    // add to bank
+    bankItems.unshift({ title: d.title, cat: d.cat, svc: d.svc, status: d.status, owner: d.owner });
+    renderBank();
+
+    // update stats
+    const total = parseInt(document.getElementById('totalCount').textContent) + 1;
+    document.getElementById('totalCount').textContent = total;
+    if (d.status === 'blocked') {
+      const b = parseInt(document.getElementById('blockedCount').textContent) + 1;
+      document.getElementById('blockedCount').textContent = b;
+    }
+
+    updateSyncTime();
+    showToast(`✓ "${d.title}" 추가됨`);
+    document.getElementById('urlInput').value = '';
+  }, 800);
+}
+
+document.getElementById('urlInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') parseLink();
+});
+
+// ── UTILS ─────────────────────────────────────────────────────────────
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+function updateSyncTime() {
+  const now = new Date();
+  document.getElementById('lastSync').textContent =
+    `마지막 동기화: ${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+}
+
+function updateFooter() {
+  const now = new Date();
+  document.getElementById('footerTime').textContent =
+    `${now.getFullYear()}.${String(now.getMonth()+1).padStart(2,'0')}.${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')} KST`;
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────
+buildReadiness();
+buildGantt();
+buildHeatmap();
+renderFeed();
+renderBank();
+updateSyncTime();
+updateFooter();
+setInterval(updateFooter, 30000);
+</script>
+</body>
+</html>
