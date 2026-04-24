@@ -1,1 +1,140 @@
+name: Sync Asana Data
+
+on:
+  schedule:
+    - cron: '0 1 * * *'   # 매일 오전 10시 KST (UTC+9)
+    - cron: '0 5 * * *'   # 매일 오후 2시 KST
+    - cron: '0 11 * * *'  # 매일 오후 8시 KST
+  workflow_dispatch:       # 수동 실행 버튼
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch Asana data and generate data.json
+        env:
+          ASANA_TOKEN: ${{ secrets.ASANA_TOKEN }}
+          ASANA_PROJECT_ID: ${{ secrets.ASANA_PROJECT_ID }}
+        run: |
+          python3 - <<'PYEOF'
+          import os, json, urllib.request, urllib.parse
+          from datetime import datetime, timezone, timedelta
+
+          TOKEN      = os.environ["ASANA_TOKEN"]
+          PROJECT_ID = os.environ["ASANA_PROJECT_ID"]
+          KST        = timezone(timedelta(hours=9))
+          NOW        = datetime.now(KST)
+          TODAY      = NOW.date()
+
+          def asana_get(path):
+              url = f"https://app.asana.com/api/1.0{path}"
+              req = urllib.request.Request(url, headers={
+                  "Authorization": f"Bearer {TOKEN}",
+                  "Accept": "application/json"
+              })
+              with urllib.request.urlopen(req) as r:
+                  return json.loads(r.read())["data"]
+
+          # ── 프로젝트 메타 ──────────────────────────────────────────
+          project = asana_get(f"/projects/{PROJECT_ID}?opt_fields=name,due_date,created_at")
+
+          # ── 섹션 목록 ──────────────────────────────────────────────
+          sections = asana_get(f"/projects/{PROJECT_ID}/sections?opt_fields=name")
+          section_map = {s["gid"]: s["name"] for s in sections}
+
+          # ── 태스크 목록 ───────────────────────────────────────────
+          fields = "name,assignee.name,due_on,completed,memberships.section.gid,notes,permalink_url,custom_fields"
+          tasks_raw = asana_get(f"/projects/{PROJECT_ID}/tasks?opt_fields={fields}&limit=100")
+
+          tasks = []
+          no_assignee = []
+          overdue     = []
+
+          for t in tasks_raw:
+              # 섹션 이름 추출
+              section = ""
+              for m in t.get("memberships", []):
+                  sgid = m.get("section", {}).get("gid", "")
+                  if sgid in section_map:
+                      section = section_map[sgid]
+                      break
+
+              assignee  = (t.get("assignee") or {}).get("name", "")
+              due_on    = t.get("due_on") or ""
+              completed = t.get("completed", False)
+              url       = t.get("permalink_url", "")
+              name      = t.get("name", "")
+
+              # 상태 판별
+              if completed:
+                  status = "done"
+              elif due_on and datetime.strptime(due_on, "%Y-%m-%d").date() < TODAY:
+                  status = "overdue"
+              else:
+                  status = "progress" if assignee else "todo"
+
+              task = {
+                  "gid":       t["gid"],
+                  "title":     name,
+                  "assignee":  assignee,
+                  "due_on":    due_on,
+                  "completed": completed,
+                  "status":    status,
+                  "section":   section,
+                  "url":       url,
+              }
+              tasks.append(task)
+
+              # 이슈 플래그
+              if not assignee and not completed:
+                  no_assignee.append(task)
+              if status == "overdue":
+                  overdue.append(task)
+
+          # ── 완료율 계산 ────────────────────────────────────────────
+          total     = len(tasks)
+          done_cnt  = sum(1 for t in tasks if t["completed"])
+          done_rate = round(done_cnt / total * 100) if total else 0
+          overdue_cnt = len(overdue)
+
+          # ── 담당자별 작업 수 ───────────────────────────────────────
+          from collections import Counter
+          owner_counts = Counter(
+              t["assignee"] for t in tasks if t["assignee"] and not t["completed"]
+          )
+
+          output = {
+              "synced_at":     NOW.strftime("%Y-%m-%d %H:%M KST"),
+              "project_name":  project.get("name", ""),
+              "project_due":   project.get("due_date", ""),
+              "total":         total,
+              "done":          done_cnt,
+              "done_rate":     done_rate,
+              "overdue_count": overdue_cnt,
+              "tasks":         tasks,
+              "no_assignee":   no_assignee,
+              "overdue":       overdue,
+              "owner_counts":  dict(owner_counts),
+              "sections":      list(section_map.values()),
+          }
+
+          with open("data.json", "w", encoding="utf-8") as f:
+              json.dump(output, f, ensure_ascii=False, indent=2)
+
+          print(f"✓ {total}개 태스크 동기화 완료 (완료율 {done_rate}%, 지연 {overdue_cnt}건)")
+          PYEOF
+
+      - name: Commit data.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git diff --staged --quiet || git commit -m "chore: sync asana data $(date +'%Y-%m-%d %H:%M KST')"
+          git push
 
