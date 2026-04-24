@@ -1,79 +1,43 @@
 {
-  "synced_at": "2026-04-24 09:52 KST",
+  "synced_at": "2026-04-24 16:19 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 3,
+  "total": 1,
   "done": 0,
   "done_rate": 0,
   "overdue_count": 0,
   "tasks": [
     {
-      "gid": "1214245812591694",
-      "title": "Test1",
+      "gid": "1214246612945102",
+      "title": "NDR 셋업",
       "assignee": "",
       "due_on": "",
       "completed": false,
       "status": "todo",
-      "section": "제목 없는 섹션",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591694"
-    },
-    {
-      "gid": "1214245812591696",
-      "title": "Test2",
-      "assignee": "",
-      "due_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "제목 없는 섹션",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591696"
-    },
-    {
-      "gid": "1214245812591698",
-      "title": "Test3",
-      "assignee": "",
-      "due_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "제목 없는 섹션",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591698"
+      "section": "기타 논의 및 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214246612945102"
     }
   ],
   "no_assignee": [
     {
-      "gid": "1214245812591694",
-      "title": "Test1",
+      "gid": "1214246612945102",
+      "title": "NDR 셋업",
       "assignee": "",
       "due_on": "",
       "completed": false,
       "status": "todo",
-      "section": "제목 없는 섹션",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591694"
-    },
-    {
-      "gid": "1214245812591696",
-      "title": "Test2",
-      "assignee": "",
-      "due_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "제목 없는 섹션",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591696"
-    },
-    {
-      "gid": "1214245812591698",
-      "title": "Test3",
-      "assignee": "",
-      "due_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "제목 없는 섹션",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591698"
+      "section": "기타 논의 및 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214246612945102"
     }
   ],
   "overdue": [],
   "owner_counts": {},
   "sections": [
-    "제목 없는 섹션",
-    "제목 없는 섹션"
+    "빌드 일정",
+    "서비스 연동 작업",
+    "최적화",
+    "론칭 작업 관련",
+    "글로벌 라전팀 담당 작업",
+    "기타 논의 및 일정"
   ]
 }
