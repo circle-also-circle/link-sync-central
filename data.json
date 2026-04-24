@@ -1,14 +1,79 @@
 {
-  "synced_at": "아직 동기화 전",
-  "project_name": "",
-  "project_due": "",
-  "total": 0,
+  "synced_at": "2026-04-24 09:52 KST",
+  "project_name": "대만 런칭 작업 목록",
+  "project_due": null,
+  "total": 3,
   "done": 0,
   "done_rate": 0,
   "overdue_count": 0,
-  "tasks": [],
-  "no_assignee": [],
+  "tasks": [
+    {
+      "gid": "1214245812591694",
+      "title": "Test1",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "제목 없는 섹션",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591694"
+    },
+    {
+      "gid": "1214245812591696",
+      "title": "Test2",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "제목 없는 섹션",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591696"
+    },
+    {
+      "gid": "1214245812591698",
+      "title": "Test3",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "제목 없는 섹션",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591698"
+    }
+  ],
+  "no_assignee": [
+    {
+      "gid": "1214245812591694",
+      "title": "Test1",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "제목 없는 섹션",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591694"
+    },
+    {
+      "gid": "1214245812591696",
+      "title": "Test2",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "제목 없는 섹션",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591696"
+    },
+    {
+      "gid": "1214245812591698",
+      "title": "Test3",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "제목 없는 섹션",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214245812591698"
+    }
+  ],
   "overdue": [],
   "owner_counts": {},
-  "sections": []
+  "sections": [
+    "제목 없는 섹션",
+    "제목 없는 섹션"
+  ]
 }
