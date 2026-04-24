@@ -573,17 +573,17 @@
   <div class="stat-row">
     <div class="stat-card c-green">
       <div class="stat-label">전체 작업</div>
-      <div class="stat-value" id="totalCount">42</div>
+      <div class="stat-value" id="totalCount">0</div>
       <div class="stat-sub">링크 등록됨</div>
     </div>
     <div class="stat-card c-green">
       <div class="stat-label">전체 완료율</div>
-      <div class="stat-value green" id="doneRate">61%</div>
-      <div class="prog-bg"><div class="prog-fill" id="overallBar" style="width:61%"></div></div>
+      <div class="stat-value green" id="doneRate">0%</div>
+      <div class="prog-bg"><div class="prog-fill" id="overallBar" style="width:0%"></div></div>
     </div>
     <div class="stat-card c-red">
       <div class="stat-label">지연 / 차단됨</div>
-      <div class="stat-value red" id="blockedCount">5</div>
+      <div class="stat-value red" id="blockedCount">0</div>
       <div class="stat-sub">critical path</div>
     </div>
     <div class="stat-card c-amber">
@@ -659,29 +659,9 @@
 
 <script>
 // ── DATA ──────────────────────────────────────────────────────────────
-const regions = [
-  { id:'NA', pct:82, launch:'05.12', color:'var(--green)' },
-  { id:'EU', pct:67, launch:'05.19', color:'var(--amber)' },
-  { id:'JP', pct:44, launch:'05.26', color:'var(--red)' },
-  { id:'KR', pct:78, launch:'05.12', color:'var(--green)' },
-  { id:'SEA', pct:55, launch:'06.02', color:'var(--amber)' },
-];
-
-const ganttRows = [
-  { label:'NA', left:0, width:55, color:'rgba(31,207,142,0.25)', text:'기획→빌드 완료', tcolor:'var(--green)' },
-  { label:'KR', left:5, width:50, color:'rgba(31,207,142,0.2)', text:'빌드·마케팅 진행중', tcolor:'var(--green)' },
-  { label:'EU', left:10, width:60, color:'rgba(245,166,35,0.2)', text:'법무 검토 지연', tcolor:'var(--amber)' },
-  { label:'SEA', left:18, width:55, color:'rgba(245,166,35,0.18)', text:'QA 시작 예정', tcolor:'var(--amber)' },
-  { label:'JP', left:22, width:65, color:'rgba(240,82,82,0.18)', text:'로컬라이징 진행중', tcolor:'var(--red)' },
-];
-
-const heatData = [
-  { name:'Jamie K.', vals:[3,1,5,2,0] },
-  { name:'Sophie M.', vals:[2,0,1,3,4] },
-  { name:'Kenji T.', vals:[1,2,6,1,0] },
-  { name:'Yuna P.', vals:[2,5,1,3,0] },
-  { name:'Arin W.', vals:[1,1,4,2,1] },
-];
+const regions = [];
+const ganttRows = [];
+const heatData = [];
 const heatCats = ['기획','디자인','개발','마케팅','법무'];
 
 function heatColor(v) {
@@ -691,25 +671,8 @@ function heatColor(v) {
   return ['rgba(240,82,82,0.18)','var(--red)'];
 }
 
-let feedItems = [
-  { title:'[NA] App Store 심사 제출', svc:'Asana', status:'progress', owner:'Jamie K.', region:'NA', due:'5/2', isNew:true },
-  { title:'[EU] GDPR 법무 검토 문서', svc:'Notion', status:'blocked', owner:'Sophie M.', region:'EU', due:'4/28', isNew:false },
-  { title:'[JP] i18n 로컬라이징 PR #482', svc:'GitHub', status:'progress', owner:'Kenji T.', region:'JP', due:'4/30', isNew:false },
-  { title:'[KR] 마케팅 배너 v3 디자인', svc:'Figma', status:'done', owner:'Yuna P.', region:'KR', due:'4/25', isNew:false },
-  { title:'[SEA] 결제 모듈 QA 티켓 #1029', svc:'Jira', status:'todo', owner:'Arin W.', region:'SEA', due:'5/5', isNew:false },
-];
-
-let bankItems = [
-  { title:'[NA] 서비스 기획안 v2.1', cat:'기획', svc:'Notion', status:'done', owner:'Jamie K.' },
-  { title:'[EU] UX 리서치 보고서', cat:'기획', svc:'Notion', status:'progress', owner:'Sophie M.' },
-  { title:'[KR] 로고 및 브랜딩 가이드', cat:'디자인', svc:'Figma', status:'done', owner:'Yuna P.' },
-  { title:'[JP] 앱 아이콘 시안 #3', cat:'디자인', svc:'Figma', status:'progress', owner:'Kenji T.' },
-  { title:'[NA] 결제 API 연동 PR', cat:'빌드', svc:'GitHub', status:'done', owner:'Jamie K.' },
-  { title:'[SEA] QA 회귀 테스트 시트', cat:'빌드', svc:'Jira', status:'todo', owner:'Arin W.' },
-  { title:'[JP] i18n 로컬라이징 PR', cat:'빌드', svc:'GitHub', status:'progress', owner:'Kenji T.' },
-  { title:'[KR] SNS 캠페인 플랜', cat:'마케팅', svc:'Asana', status:'done', owner:'Yuna P.' },
-  { title:'[EU] 런칭 이메일 시퀀스', cat:'마케팅', svc:'Asana', status:'blocked', owner:'Sophie M.' },
-];
+let feedItems = [];
+let bankItems = [];
 
 const svcStyle = {
   Asana: { cls:'tag-asana', bg:'rgba(245,166,35,0.15)', fg:'#f5a623' },
@@ -727,6 +690,10 @@ const statusLabel  = { done:'완료', progress:'진행중', blocked:'차단됨',
 function buildReadiness() {
   const el = document.getElementById('readinessGrid');
   el.innerHTML = '';
+  if (regions.length === 0) {
+    el.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:28px 0; color:var(--text3); font-size:12px; font-family:var(--mono);">링크를 등록하면 지역별 준비도가 표시됩니다</div>`;
+    return;
+  }
   regions.forEach(r => {
     const div = document.createElement('div');
     div.className = 'region-card';
@@ -746,6 +713,10 @@ function buildReadiness() {
 function buildGantt() {
   const el = document.getElementById('ganttChart');
   el.innerHTML = '';
+  if (ganttRows.length === 0) {
+    el.innerHTML = `<div style="text-align:center; padding:28px 0; color:var(--text3); font-size:12px; font-family:var(--mono);">타임라인 데이터 없음</div>`;
+    return;
+  }
   ganttRows.forEach(r => {
     const row = document.createElement('div');
     row.className = 'gantt-row';
@@ -764,7 +735,10 @@ function buildGantt() {
 function buildHeatmap() {
   const el = document.getElementById('heatmap');
   el.innerHTML = '';
-  // headers
+  if (heatData.length === 0) {
+    el.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:28px 0; color:var(--text3); font-size:12px; font-family:var(--mono);">담당자를 등록하면 히트맵이 표시됩니다</div>`;
+    return;
+  }
   el.appendChild(document.createElement('div'));
   heatCats.forEach(c => {
     const h = document.createElement('div');
@@ -793,28 +767,36 @@ function buildHeatmap() {
 function renderFeed() {
   const el = document.getElementById('linkFeed');
   el.innerHTML = '';
+  if (feedItems.length === 0) {
+    el.innerHTML = `<div style="text-align:center; padding:32px 0; color:var(--text3); font-size:12px; font-family:var(--mono);">
+      링크를 붙여넣으면 여기에 표시됩니다
+    </div>`;
+    document.getElementById('feedCount').textContent = '0개 항목';
+    return;
+  }
   feedItems.forEach(d => {
-    const svc = svcStyle[d.svc] || svcStyle.GitHub;
+    const svc = svcStyle[d.svc] || { cls:'tag-github', bg:'rgba(138,141,151,0.12)', fg:'#8a8d97' };
     const item = document.createElement('div');
     item.className = 'feed-item';
     item.innerHTML = `
       <div class="svc-icon" style="background:${svc.bg}; color:${svc.fg}">${d.svc.slice(0,2)}</div>
-      <div>
+      <div style="overflow:hidden;">
         <div class="feed-title">${d.title}${d.isNew ? '<span class="new-badge">NEW</span>' : ''}</div>
         <div class="feed-meta">
           <span class="sdot ${statusDotCls[d.status]}"></span>
           <span>${statusLabel[d.status]}</span>
           <span style="color:var(--text3)">·</span>
           <span>${d.owner}</span>
-          <span style="color:var(--text3)">·</span>
-          <span>마감 ${d.due}</span>
+          ${d.due ? `<span style="color:var(--text3)">·</span><span>마감 ${d.due}</span>` : ''}
         </div>
       </div>
       <div class="feed-tags">
         <span class="tag ${svc.cls}">${d.svc}</span>
-        <span class="tag ${regionTagCls[d.region] || ''}">${d.region}</span>
+        ${d.region ? `<span class="tag ${regionTagCls[d.region] || ''}">${d.region}</span>` : ''}
       </div>
     `;
+    if (d.url) item.style.cursor = 'pointer';
+    item.onclick = () => { if (d.url) window.open(d.url, '_blank'); };
     el.appendChild(item);
   });
   document.getElementById('feedCount').textContent = `${feedItems.length}개 항목`;
@@ -833,8 +815,15 @@ function renderBank() {
   const el = document.getElementById('bankList');
   el.innerHTML = '';
   const items = currentFilter === 'all' ? bankItems : bankItems.filter(d => d.cat === currentFilter);
+  if (items.length === 0) {
+    el.innerHTML = `<div style="text-align:center; padding:24px 0; color:var(--text3); font-size:12px; font-family:var(--mono);">
+      ${currentFilter === 'all' ? '등록된 링크가 없습니다' : `${currentFilter} 카테고리에 링크가 없습니다`}
+    </div>`;
+    document.getElementById('bankCount').textContent = '0개 링크';
+    return;
+  }
   items.forEach(d => {
-    const svc = svcStyle[d.svc] || svcStyle.GitHub;
+    const svc = svcStyle[d.svc] || { cls:'tag-github', bg:'rgba(138,141,151,0.12)', fg:'#8a8d97' };
     const item = document.createElement('div');
     item.className = 'bank-item';
     item.innerHTML = `
@@ -843,54 +832,167 @@ function renderBank() {
       <span class="tag ${svc.cls}">${d.svc}</span>
       <span style="font-size:11px; color:var(--text3); white-space:nowrap; margin-left:4px;">${d.owner}</span>
     `;
-    item.onclick = () => showToast(`${d.title} → ${statusLabel[d.status]}`);
+    if (d.url) {
+      item.style.cursor = 'pointer';
+      item.onclick = () => window.open(d.url, '_blank');
+    }
     el.appendChild(item);
   });
   document.getElementById('bankCount').textContent = `${items.length}개 링크`;
 }
 
 // ── PARSE LINK ────────────────────────────────────────────────────────
-const fakePool = [
-  { title:'[NA] App Store 메타데이터 업데이트', svc:'Asana', status:'todo', owner:'Jamie K.', region:'NA', due:'5/8', cat:'마케팅' },
-  { title:'[EU] 결제 PSD2 연동 완료 확인', svc:'Jira', status:'progress', owner:'Tomás R.', region:'EU', due:'5/3', cat:'빌드' },
-  { title:'[JP] 오프보딩 플로우 디자인', svc:'Figma', status:'todo', owner:'Kenji T.', region:'JP', due:'5/6', cat:'디자인' },
-  { title:'[KR] 앱스토어 스크린샷 갱신', svc:'Notion', status:'done', owner:'Yuna P.', region:'KR', due:'4/26', cat:'마케팅' },
-  { title:'[SEA] 다국어 약관 번역본 검토', svc:'GitHub', status:'blocked', owner:'Arin W.', region:'SEA', due:'4/29', cat:'기획' },
-];
+function detectService(url) {
+  if (/asana\.com/i.test(url))         return 'Asana';
+  if (/notion\.so|notion\.site/i.test(url)) return 'Notion';
+  if (/github\.com/i.test(url))        return 'GitHub';
+  if (/figma\.com/i.test(url))         return 'Figma';
+  if (/atlassian\.net|jira\./i.test(url)) return 'Jira';
+  if (/slack\.com/i.test(url))         return 'Slack';
+  if (/docs\.google\.com/i.test(url))  return 'Google Docs';
+  if (/sheets\.google\.com/i.test(url)) return 'Google Sheets';
+  return '링크';
+}
 
-let parseIdx = 0;
+function extractTitle(url) {
+  try {
+    const u = new URL(url);
+    // GitHub: repo/issues/123 → "Issue #123 · repo"
+    const ghIssue = u.pathname.match(/\/([^/]+)\/([^/]+)\/(issues|pull)\/(\d+)/);
+    if (ghIssue) return `${ghIssue[3] === 'pull' ? 'PR' : 'Issue'} #${ghIssue[4]} · ${ghIssue[1]}/${ghIssue[2]}`;
+    // Asana: task ID 추출
+    const asanaTask = u.pathname.match(/\/(\d{10,})/);
+    if (asanaTask && /asana/.test(url)) return `Asana 작업 #${asanaTask[1]}`;
+    // Jira: ticket key
+    const jiraKey = url.match(/([A-Z][A-Z0-9]+-\d+)/);
+    if (jiraKey) return `${jiraKey[1]}`;
+    // Notion: 마지막 path segment, 하이픈을 공백으로
+    const notionSeg = u.pathname.split('/').filter(Boolean).pop() || '';
+    const notionTitle = notionSeg.replace(/-[a-f0-9]{32}$/, '').replace(/-/g, ' ');
+    if (notionSeg && notionTitle.length > 2) return notionTitle;
+    // Figma
+    const figmaFile = u.pathname.match(/\/(file|design)\/[^/]+\/([^?/]+)/);
+    if (figmaFile) return decodeURIComponent(figmaFile[2]).replace(/-/g, ' ');
+    // fallback: hostname + path
+    return (u.hostname + u.pathname).replace(/\/$/, '').slice(-60);
+  } catch {
+    return url.slice(0, 60);
+  }
+}
+
+function showAddModal(url, detectedSvc, detectedTitle) {
+  // remove existing modal
+  const old = document.getElementById('addModal');
+  if (old) old.remove();
+
+  const overlay = document.createElement('div');
+  overlay.id = 'addModal';
+  overlay.style.cssText = `
+    position:fixed; inset:0; z-index:200;
+    background:rgba(0,0,0,0.6); backdrop-filter:blur(4px);
+    display:flex; align-items:center; justify-content:center; padding:16px;
+  `;
+
+  overlay.innerHTML = `
+    <div style="background:var(--bg2); border:1px solid var(--border2); border-radius:var(--radius); padding:24px; width:100%; max-width:460px;">
+      <div style="font-size:13px; font-weight:500; margin-bottom:16px; color:var(--text);">링크 등록</div>
+
+      <div style="margin-bottom:12px;">
+        <div style="font-size:11px; color:var(--text3); margin-bottom:5px; font-family:var(--mono);">URL</div>
+        <div style="font-size:11px; color:var(--text2); background:var(--bg3); padding:7px 10px; border-radius:var(--radius-sm); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${url}</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
+        <div>
+          <div style="font-size:11px; color:var(--text3); margin-bottom:5px; font-family:var(--mono);">서비스</div>
+          <select id="m_svc" style="width:100%; background:var(--bg3); border:1px solid var(--border); color:var(--text); padding:7px 10px; border-radius:var(--radius-sm); font-size:12px; outline:none;">
+            ${['Asana','Notion','GitHub','Figma','Jira','Slack','Google Docs','Google Sheets','기타'].map(s => `<option value="${s}" ${s===detectedSvc?'selected':''}>${s}</option>`).join('')}
+          </select>
+        </div>
+        <div>
+          <div style="font-size:11px; color:var(--text3); margin-bottom:5px; font-family:var(--mono);">카테고리</div>
+          <select id="m_cat" style="width:100%; background:var(--bg3); border:1px solid var(--border); color:var(--text); padding:7px 10px; border-radius:var(--radius-sm); font-size:12px; outline:none;">
+            ${['기획','디자인','빌드','마케팅','기타'].map(c => `<option value="${c}">${c}</option>`).join('')}
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <div style="font-size:11px; color:var(--text3); margin-bottom:5px; font-family:var(--mono);">제목</div>
+        <input id="m_title" type="text" value="${detectedTitle}" style="width:100%; background:var(--bg3); border:1px solid var(--border); color:var(--text); padding:7px 10px; border-radius:var(--radius-sm); font-size:12px; outline:none;">
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:16px;">
+        <div>
+          <div style="font-size:11px; color:var(--text3); margin-bottom:5px; font-family:var(--mono);">담당자</div>
+          <input id="m_owner" type="text" placeholder="이름" style="width:100%; background:var(--bg3); border:1px solid var(--border); color:var(--text); padding:7px 10px; border-radius:var(--radius-sm); font-size:12px; outline:none;">
+        </div>
+        <div>
+          <div style="font-size:11px; color:var(--text3); margin-bottom:5px; font-family:var(--mono);">지역</div>
+          <select id="m_region" style="width:100%; background:var(--bg3); border:1px solid var(--border); color:var(--text); padding:7px 10px; border-radius:var(--radius-sm); font-size:12px; outline:none;">
+            ${['NA','EU','JP','KR','SEA','글로벌'].map(r => `<option value="${r}">${r}</option>`).join('')}
+          </select>
+        </div>
+        <div>
+          <div style="font-size:11px; color:var(--text3); margin-bottom:5px; font-family:var(--mono);">상태</div>
+          <select id="m_status" style="width:100%; background:var(--bg3); border:1px solid var(--border); color:var(--text); padding:7px 10px; border-radius:var(--radius-sm); font-size:12px; outline:none;">
+            <option value="todo">대기</option>
+            <option value="progress" selected>진행중</option>
+            <option value="done">완료</option>
+            <option value="blocked">차단됨</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:8px; justify-content:flex-end;">
+        <button onclick="document.getElementById('addModal').remove()" style="padding:7px 16px; background:transparent; border:1px solid var(--border); color:var(--text2); border-radius:var(--radius-sm); font-size:12px; cursor:pointer;">취소</button>
+        <button onclick="confirmAdd('${url}')" style="padding:7px 16px; background:var(--green); border:none; color:#0e0f11; border-radius:var(--radius-sm); font-size:12px; font-weight:500; cursor:pointer;">등록</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
+}
+
+function confirmAdd(url) {
+  const title  = document.getElementById('m_title').value.trim() || url;
+  const svc    = document.getElementById('m_svc').value;
+  const cat    = document.getElementById('m_cat').value;
+  const owner  = document.getElementById('m_owner').value.trim() || '—';
+  const region = document.getElementById('m_region').value;
+  const status = document.getElementById('m_status').value;
+
+  const now = new Date();
+  const due = `${now.getMonth()+1}/${now.getDate()+7}`;
+
+  const item = { title, svc, status, owner, region, due, isNew:true, url };
+  feedItems.unshift(item);
+  if (feedItems.length > 30) feedItems.pop();
+  renderFeed();
+
+  bankItems.unshift({ title, cat, svc, status, owner, url });
+  renderBank();
+
+  const total = parseInt(document.getElementById('totalCount').textContent) + 1;
+  document.getElementById('totalCount').textContent = total;
+  if (status === 'blocked') {
+    const b = parseInt(document.getElementById('blockedCount').textContent) + 1;
+    document.getElementById('blockedCount').textContent = b;
+  }
+
+  updateSyncTime();
+  document.getElementById('addModal').remove();
+  document.getElementById('urlInput').value = '';
+  showToast(`✓ "${title}" 등록됨`);
+}
 
 function parseLink() {
   const val = document.getElementById('urlInput').value.trim();
   if (!val) { showToast('URL을 먼저 입력해 주세요.'); return; }
-  showToast('⏳ 링크 분석 중…');
-
-  setTimeout(() => {
-    const d = fakePool[parseIdx % fakePool.length];
-    parseIdx++;
-
-    // prepend to feed
-    d.isNew = true;
-    feedItems.unshift(d);
-    if (feedItems.length > 10) feedItems.pop();
-    renderFeed();
-
-    // add to bank
-    bankItems.unshift({ title: d.title, cat: d.cat, svc: d.svc, status: d.status, owner: d.owner });
-    renderBank();
-
-    // update stats
-    const total = parseInt(document.getElementById('totalCount').textContent) + 1;
-    document.getElementById('totalCount').textContent = total;
-    if (d.status === 'blocked') {
-      const b = parseInt(document.getElementById('blockedCount').textContent) + 1;
-      document.getElementById('blockedCount').textContent = b;
-    }
-
-    updateSyncTime();
-    showToast(`✓ "${d.title}" 추가됨`);
-    document.getElementById('urlInput').value = '';
-  }, 800);
+  const svc   = detectService(val);
+  const title = extractTitle(val);
+  showAddModal(val, svc, title);
 }
 
 document.getElementById('urlInput').addEventListener('keydown', e => {
