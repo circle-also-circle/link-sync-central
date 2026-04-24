@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Fetch Asana data and generate data.json
         env:
@@ -23,11 +25,18 @@ jobs:
           ASANA_PROJECT_ID: ${{ secrets.ASANA_PROJECT_ID }}
         run: |
           python3 - <<'PYEOF'
-          import os, json, urllib.request, urllib.parse
+          import os, json, urllib.request, urllib.parse, sys
           from datetime import datetime, timezone, timedelta
 
-          TOKEN      = os.environ["ASANA_TOKEN"]
-          PROJECT_ID = os.environ["ASANA_PROJECT_ID"]
+          TOKEN      = os.environ.get("ASANA_TOKEN", "").strip()
+          PROJECT_ID = os.environ.get("ASANA_PROJECT_ID", "").strip()
+
+          if not TOKEN:
+              print("ERROR: ASANA_TOKEN secret이 비어 있습니다. 저장소 Settings → Secrets → ASANA_TOKEN 을 확인해 주세요.")
+              sys.exit(1)
+          if not PROJECT_ID:
+              print("ERROR: ASANA_PROJECT_ID secret이 비어 있습니다. 저장소 Settings → Secrets → ASANA_PROJECT_ID 를 확인해 주세요.")
+              sys.exit(1)
           KST        = timezone(timedelta(hours=9))
           NOW        = datetime.now(KST)
           TODAY      = NOW.date()
@@ -38,8 +47,20 @@ jobs:
                   "Authorization": f"Bearer {TOKEN}",
                   "Accept": "application/json"
               })
-              with urllib.request.urlopen(req) as r:
-                  return json.loads(r.read())["data"]
+              try:
+                  with urllib.request.urlopen(req) as r:
+                      return json.loads(r.read())["data"]
+              except urllib.error.HTTPError as e:
+                  body = e.read().decode()
+                  print(f"ERROR: Asana API 실패 [{e.code}] {path}")
+                  print(f"  응답: {body[:300]}")
+                  if e.code == 401:
+                      print("  → ASANA_TOKEN 이 잘못되었거나 만료되었습니다.")
+                  elif e.code == 403:
+                      print("  → 해당 프로젝트에 접근 권한이 없습니다.")
+                  elif e.code == 404:
+                      print("  → ASANA_PROJECT_ID 가 잘못되었습니다. URL에서 숫자 ID를 다시 확인해 주세요.")
+                  sys.exit(1)
 
           # ── 프로젝트 메타 ──────────────────────────────────────────
           project = asana_get(f"/projects/{PROJECT_ID}?opt_fields=name,due_date,created_at")
@@ -137,4 +158,3 @@ jobs:
           git add data.json
           git diff --staged --quiet || git commit -m "chore: sync asana data $(date +'%Y-%m-%d %H:%M KST')"
           git push
-
