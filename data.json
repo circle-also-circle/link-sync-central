@@ -1,12 +1,122 @@
 {
-  "synced_at": "2026-04-26 23:10 KST",
+  "synced_at": "2026-04-27 18:31 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 1,
-  "done": 0,
-  "done_rate": 0,
+  "total": 12,
+  "done": 2,
+  "done_rate": 17,
   "overdue_count": 0,
   "tasks": [
+    {
+      "gid": "1214287009807248",
+      "title": "4월 플레이어블 빌드 to 사업팀 (번체 폰트 적용)",
+      "assignee": "",
+      "due_on": "2026-04-10",
+      "completed": true,
+      "status": "done",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807248"
+    },
+    {
+      "gid": "1214287009807262",
+      "title": "4월 사내 테스트 빌드 ",
+      "assignee": "",
+      "due_on": "2026-04-17",
+      "completed": true,
+      "status": "done",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807262"
+    },
+    {
+      "gid": "1214287009807260",
+      "title": "초도 검수 QA 시작",
+      "assignee": "",
+      "due_on": "2026-05-08",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807260"
+    },
+    {
+      "gid": "1214287009807268",
+      "title": "초도 검수 제출",
+      "assignee": "",
+      "due_on": "2026-05-15",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807268"
+    },
+    {
+      "gid": "1214287009807258",
+      "title": "부하 테스트 (5월 말 ~ 6월 초) ",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807258"
+    },
+    {
+      "gid": "1214287009807256",
+      "title": "사전 등록 빌드 검수 제출",
+      "assignee": "",
+      "due_on": "2026-06-09",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807256"
+    },
+    {
+      "gid": "1214287009807270",
+      "title": "사전 등록 시작",
+      "assignee": "",
+      "due_on": "2026-06-24",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807270"
+    },
+    {
+      "gid": "1214287009807254",
+      "title": "대만 론칭 빌드 검수 제출 ",
+      "assignee": "",
+      "due_on": "2026-07-08",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807254"
+    },
+    {
+      "gid": "1214287009807274",
+      "title": "사전 다운로드",
+      "assignee": "",
+      "due_on": "2026-07-20",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807274"
+    },
+    {
+      "gid": "1214287009807276",
+      "title": "캐릭터 사전 생성",
+      "assignee": "",
+      "due_on": "2026-07-20",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807276"
+    },
+    {
+      "gid": "1214287009807278",
+      "title": "대만 론칭 (대만 00시, 한국 01시)",
+      "assignee": "",
+      "due_on": "2026-07-22",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807278"
+    },
     {
       "gid": "1214246612945102",
       "title": "NDR 셋업",
@@ -19,6 +129,96 @@
     }
   ],
   "no_assignee": [
+    {
+      "gid": "1214287009807260",
+      "title": "초도 검수 QA 시작",
+      "assignee": "",
+      "due_on": "2026-05-08",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807260"
+    },
+    {
+      "gid": "1214287009807268",
+      "title": "초도 검수 제출",
+      "assignee": "",
+      "due_on": "2026-05-15",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807268"
+    },
+    {
+      "gid": "1214287009807258",
+      "title": "부하 테스트 (5월 말 ~ 6월 초) ",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807258"
+    },
+    {
+      "gid": "1214287009807256",
+      "title": "사전 등록 빌드 검수 제출",
+      "assignee": "",
+      "due_on": "2026-06-09",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807256"
+    },
+    {
+      "gid": "1214287009807270",
+      "title": "사전 등록 시작",
+      "assignee": "",
+      "due_on": "2026-06-24",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807270"
+    },
+    {
+      "gid": "1214287009807254",
+      "title": "대만 론칭 빌드 검수 제출 ",
+      "assignee": "",
+      "due_on": "2026-07-08",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807254"
+    },
+    {
+      "gid": "1214287009807274",
+      "title": "사전 다운로드",
+      "assignee": "",
+      "due_on": "2026-07-20",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807274"
+    },
+    {
+      "gid": "1214287009807276",
+      "title": "캐릭터 사전 생성",
+      "assignee": "",
+      "due_on": "2026-07-20",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807276"
+    },
+    {
+      "gid": "1214287009807278",
+      "title": "대만 론칭 (대만 00시, 한국 01시)",
+      "assignee": "",
+      "due_on": "2026-07-22",
+      "completed": false,
+      "status": "todo",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807278"
+    },
     {
       "gid": "1214246612945102",
       "title": "NDR 셋업",
@@ -33,7 +233,7 @@
   "overdue": [],
   "owner_counts": {},
   "sections": [
-    "빌드 일정",
+    "주요 일정",
     "서비스 연동 작업",
     "최적화",
     "론칭 작업 관련",
