@@ -78,24 +78,41 @@ main{padding:20px 28px;max-width:1280px;margin:0 auto;display:flex;flex-directio
 /* ── task list ── */
 .task-list{display:flex;flex-direction:column;gap:5px;max-height:360px;overflow-y:auto;padding-right:2px}
 .task-item{
-  display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start;
-  padding:9px 12px;border-radius:var(--rs);border:1px solid var(--border);
-  background:var(--bg3);cursor:pointer;transition:border-color .15s;
+  display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;
+  padding:10px 14px;border-radius:var(--rs);
+  border:1px solid var(--border);border-left-width:3px;
+  background:var(--bg3);cursor:pointer;transition:border-color .15s,background .15s;
   animation:fadeIn .25s ease;
 }
+.task-item.st-done    {border-left-color:var(--green); background:rgba(31,207,142,0.03)}
+.task-item.st-progress{border-left-color:var(--amber); background:rgba(245,166,35,0.03)}
+.task-item.st-overdue {border-left-color:var(--red);   background:rgba(240,82,82,0.05)}
+.task-item.st-todo    {border-left-color:var(--text3);  background:var(--bg3)}
 @keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
-.task-item:hover{border-color:var(--border2)}
-.task-title{font-size:12px;font-weight:500;color:var(--text);margin-bottom:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:400px}
-.task-meta{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:7px;flex-wrap:wrap}
-.task-tags{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;align-items:flex-start}
+.task-item:hover{border-color:var(--border2);filter:brightness(1.06)}
+.task-item.st-done .task-title{color:var(--text2);text-decoration:line-through;text-decoration-color:rgba(255,255,255,0.2)}
+.task-title{font-size:12px;font-weight:500;color:var(--text);margin-bottom:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:460px}
+.task-meta{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:3px}
+.task-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0}
+
+/* ── status chip ── */
+.chip{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:500;white-space:nowrap}
+.chip::before{content:'';width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.chip-done    {background:rgba(31,207,142,0.15);color:var(--green);border:1px solid rgba(31,207,142,0.25)}
+.chip-progress{background:rgba(245,166,35,0.15);color:var(--amber);border:1px solid rgba(245,166,35,0.25)}
+.chip-overdue {background:rgba(240,82,82,0.15);color:var(--red);  border:1px solid rgba(240,82,82,0.25)}
+.chip-todo    {background:rgba(255,255,255,0.05);color:var(--text3);border:1px solid var(--border)}
+.chip-done::before    {background:var(--green)}
+.chip-progress::before{background:var(--amber)}
+.chip-overdue::before {background:var(--red)}
+.chip-todo::before    {background:var(--text3)}
 
 /* ── issue flag ── */
 .flag{display:inline-flex;align-items:center;gap:3px;padding:2px 6px;border-radius:4px;font-size:10px;font-family:var(--mono);white-space:nowrap}
-.flag-overdue{background:var(--red-dim);color:var(--red);border:1px solid rgba(240,82,82,0.2)}
+.flag-overdue {background:var(--red-dim); color:var(--red);  border:1px solid rgba(240,82,82,0.2)}
 .flag-no-owner{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(245,166,35,0.2)}
-.flag-new{background:var(--green-dim);color:var(--green);border:1px solid rgba(31,207,142,0.2)}
 
-/* ── status dot ── */
+/* ── status dot (레거시) ── */
 .sdot{width:6px;height:6px;border-radius:50%;display:inline-block;flex-shrink:0}
 .s-done{background:var(--green)}.s-progress{background:var(--amber)}.s-overdue{background:var(--red)}.s-todo{background:var(--text3)}
 
@@ -238,23 +255,56 @@ main{padding:20px 28px;max-width:1280px;margin:0 auto;display:flex;flex-directio
 <!-- ══ 이슈 리포트 탭 ══════════════════════════════════════════════ -->
 <div id="tab-report" class="tab-panel">
 <main>
+
+  <!-- 리포트 헤더 -->
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+    <div>
+      <div style="font-size:16px;font-weight:500;margin-bottom:4px" id="reportTitle">이슈 리포트</div>
+      <div style="font-size:12px;color:var(--text3);font-family:var(--mono)" id="reportSubtitle">—</div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button onclick="copyReportText()" style="padding:7px 14px;background:var(--bg3);border:1px solid var(--border2);color:var(--text2);border-radius:var(--rs);font-size:12px;cursor:pointer;font-family:var(--font)">
+        📋 슬랙/이메일용 텍스트 복사
+      </button>
+    </div>
+  </div>
+
+  <!-- 요약 바 -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-top:2px solid var(--green)">
+      <div style="font-size:11px;color:var(--text2);margin-bottom:6px">전체 완료율</div>
+      <div style="font-size:24px;font-weight:300;color:var(--green)" id="rDoneRate">—</div>
+      <div class="prog-bg" style="margin-top:8px"><div class="prog-fill" id="rDoneBar" style="width:0%"></div></div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-top:2px solid var(--red)">
+      <div style="font-size:11px;color:var(--text2);margin-bottom:6px">기한 초과</div>
+      <div style="font-size:24px;font-weight:300;color:var(--red)" id="rOverdue">—</div>
+      <div style="font-size:11px;color:var(--text3);font-family:var(--mono);margin-top:4px">즉시 조치 필요</div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-top:2px solid var(--amber)">
+      <div style="font-size:11px;color:var(--text2);margin-bottom:6px">담당자 미배정</div>
+      <div style="font-size:24px;font-weight:300;color:var(--amber)" id="rNoOwner">—</div>
+      <div style="font-size:11px;color:var(--text3);font-family:var(--mono);margin-top:4px">배정 필요</div>
+    </div>
+  </div>
+
   <div class="card">
     <div class="report-section">
       <div class="report-title">
-        기한 초과 태스크
+        🔴 기한 초과 태스크
         <span class="badge-cnt badge-red" id="overdueListCount">0건</span>
       </div>
-      <div id="overdueList"><div class="empty-msg">기한 초과 항목 없음</div></div>
+      <div id="overdueList"><div class="empty-msg">기한 초과 항목 없음 ✓</div></div>
     </div>
 
-    <div style="height:1px;background:var(--border);margin-bottom:20px"></div>
+    <div style="height:1px;background:var(--border);margin:20px 0"></div>
 
     <div class="report-section">
       <div class="report-title">
-        담당자 미배정 태스크
+        🟡 담당자 미배정 태스크
         <span class="badge-cnt badge-amber" id="noOwnerListCount">0건</span>
       </div>
-      <div id="noOwnerList"><div class="empty-msg">미배정 항목 없음</div></div>
+      <div id="noOwnerList"><div class="empty-msg">미배정 항목 없음 ✓</div></div>
     </div>
   </div>
 </main>
@@ -403,16 +453,23 @@ function renderFeed(d) {
 
 // ── 리포트 탭 ─────────────────────────────────────────────────────────
 function renderReport(d) {
+  // 헤더
+  document.getElementById('reportTitle').textContent  = `${d.project_name || '프로젝트'} — 이슈 리포트`;
+  document.getElementById('reportSubtitle').textContent = `기준: ${d.synced_at}`;
+
+  // 요약 바
+  document.getElementById('rDoneRate').textContent  = d.done_rate + '%';
+  document.getElementById('rDoneBar').style.width   = d.done_rate + '%';
+  document.getElementById('rOverdue').textContent   = d.overdue_count;
+  document.getElementById('rNoOwner').textContent   = d.no_assignee.length;
+
   // overdue
   const odEl = document.getElementById('overdueList');
   document.getElementById('overdueListCount').textContent = d.overdue.length + '건';
   if (!d.overdue.length) { odEl.innerHTML = '<div class="empty-msg">기한 초과 항목 없음 ✓</div>'; }
   else {
     odEl.innerHTML = '';
-    d.overdue.forEach(t => {
-      const card = makeIssueCard(t, 'overdue');
-      odEl.appendChild(card);
-    });
+    d.overdue.forEach(t => odEl.appendChild(makeIssueCard(t, 'overdue')));
   }
 
   // no-assignee
@@ -421,11 +478,46 @@ function renderReport(d) {
   if (!d.no_assignee.length) { naEl.innerHTML = '<div class="empty-msg">미배정 항목 없음 ✓</div>'; }
   else {
     naEl.innerHTML = '';
-    d.no_assignee.forEach(t => {
-      const card = makeIssueCard(t, 'no-owner');
-      naEl.appendChild(card);
+    d.no_assignee.forEach(t => naEl.appendChild(makeIssueCard(t, 'no-owner')));
+  }
+}
+
+// ── 슬랙/이메일 리포트 텍스트 복사 ────────────────────────────────────
+function copyReportText() {
+  if (!DATA) return;
+  const d   = DATA;
+  const now = d.synced_at;
+  const lines = [];
+
+  lines.push(`📊 *${d.project_name} — 런칭 현황 리포트*`);
+  lines.push(`기준: ${now}`);
+  lines.push('');
+  lines.push(`✅ 전체 완료율: *${d.done_rate}%* (${d.done}/${d.total})`);
+  lines.push(`🔴 기한 초과: *${d.overdue_count}건*`);
+  lines.push(`🟡 담당자 미배정: *${d.no_assignee.length}건*`);
+
+  if (d.overdue.length) {
+    lines.push('');
+    lines.push('🔴 *기한 초과 항목*');
+    d.overdue.forEach(t => {
+      lines.push(`  • ${t.title}  (${t.assignee || '미배정'} / 마감 ${t.due_on || '없음'} / +${daysSince(t.due_on)}일 초과)`);
     });
   }
+
+  if (d.no_assignee.length) {
+    lines.push('');
+    lines.push('🟡 *담당자 미배정 항목*');
+    d.no_assignee.forEach(t => {
+      lines.push(`  • ${t.title}  (마감 ${t.due_on || '없음'} / ${t.section || '섹션없음'})`);
+    });
+  }
+
+  lines.push('');
+  lines.push(`🔗 대시보드: ${location.href}`);
+
+  navigator.clipboard.writeText(lines.join('\n'))
+    .then(() => showToast('📋 클립보드에 복사됐어요. 슬랙이나 이메일에 바로 붙여넣기 하세요!'))
+    .catch(() => showToast('복사 실패 — 브라우저 권한을 확인해주세요'));
 }
 
 // ── 전체 태스크 탭 ────────────────────────────────────────────────────
@@ -463,30 +555,33 @@ function filterAllTasks(d) {
 }
 
 // ── 태스크 아이템 공통 컴포넌트 ───────────────────────────────────────
+const chipClass = { done:'chip-done', progress:'chip-progress', overdue:'chip-overdue', todo:'chip-todo' };
+const chipLabel = { done:'완료', progress:'진행중', overdue:'기한 초과', todo:'대기' };
+const itemClass = { done:'st-done', progress:'st-progress', overdue:'st-overdue', todo:'st-todo' };
+
 function makeTaskItem(t) {
   const item = document.createElement('div');
-  item.className = 'task-item';
-  const flags = [];
-  if (t.status === 'overdue') flags.push(`<span class="flag flag-overdue">기한초과</span>`);
-  if (!t.assignee) flags.push(`<span class="flag flag-no-owner">담당자없음</span>`);
+  const sc   = itemClass[t.status] || 'st-todo';
+  item.className = `task-item ${sc}`;
 
-  const dueStr  = t.due_on ? formatDate(t.due_on) : '마감일 없음';
-  const dueColor = t.status === 'overdue' ? 'color:var(--red)' : '';
+  const dueStr   = t.due_on ? formatDate(t.due_on) : '—';
+  const dueStyle = t.status === 'overdue' ? 'color:var(--red);font-weight:500' : '';
+  const overdueDays = t.status === 'overdue' ? ` <span class="flag flag-overdue">+${daysSince(t.due_on)}일</span>` : '';
+  const noOwner     = !t.assignee && !t.completed ? `<span class="flag flag-no-owner">담당자없음</span>` : '';
 
   item.innerHTML = `
-    <span class="sdot ${statusDot[t.status] || 's-todo'}" style="margin-top:4px"></span>
-    <div style="overflow:hidden">
+    <div style="overflow:hidden;min-width:0">
       <div class="task-title">${escHtml(t.title)}</div>
       <div class="task-meta">
-        <span>${t.assignee || '<span style="color:var(--amber)">담당자 없음</span>'}</span>
-        <span style="color:var(--text3)">·</span>
-        <span style="${dueColor}">${dueStr}</span>
-        ${t.section ? `<span style="color:var(--text3)">·</span><span style="color:var(--text3)">${t.section}</span>` : ''}
+        <span>${t.assignee ? escHtml(t.assignee) : '<span style="color:var(--amber)">미배정</span>'}</span>
+        <span>·</span>
+        <span style="${dueStyle}">${dueStr}${overdueDays}</span>
+        ${t.section ? `<span>·</span><span>${escHtml(t.section)}</span>` : ''}
+        ${noOwner}
       </div>
-      ${flags.length ? `<div style="margin-top:5px;display:flex;gap:4px">${flags.join('')}</div>` : ''}
     </div>
-    <div class="task-tags">
-      <span class="flag" style="background:rgba(255,255,255,0.04);color:var(--text3)">${statusLabel[t.status] || '—'}</span>
+    <div class="task-right">
+      <span class="chip ${chipClass[t.status] || 'chip-todo'}">${chipLabel[t.status] || '—'}</span>
     </div>
   `;
   if (t.url) item.onclick = () => window.open(t.url, '_blank');
