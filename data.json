@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-04-27 18:31 KST",
+  "synced_at": "2026-04-28 12:48 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 12,
-  "done": 2,
-  "done_rate": 17,
-  "overdue_count": 0,
+  "total": 37,
+  "done": 5,
+  "done_rate": 14,
+  "overdue_count": 2,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -118,10 +118,260 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807278"
     },
     {
+      "gid": "1214177556222779",
+      "title": "[v3.0_0625A][대만런칭] 구글 OOAP 연동 작업 요청",
+      "assignee": "이지수",
+      "due_on": "2026-05-26",
+      "completed": false,
+      "status": "progress",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214177556222779"
+    },
+    {
+      "gid": "1214046126850053",
+      "title": "[TW_0526] IAP OFFER CODE 연동 작업 요청",
+      "assignee": "이지수",
+      "due_on": "2026-05-26",
+      "completed": false,
+      "status": "progress",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214046126850053"
+    },
+    {
+      "gid": "1214145761152754",
+      "title": "쿠폰 플러스",
+      "assignee": "임재훈",
+      "due_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214145761152754"
+    },
+    {
+      "gid": "1214067836467510",
+      "title": "[TW_0526] 대만 PC 빌링 연동 작업",
+      "assignee": "임재훈",
+      "due_on": "2026-05-26",
+      "completed": false,
+      "status": "progress",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214067836467510"
+    },
+    {
+      "gid": "1214345454495767",
+      "title": "인증 방식 및 수단 ",
+      "assignee": "",
+      "due_on": "2026-04-27",
+      "completed": true,
+      "status": "done",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345454495767"
+    },
+    {
+      "gid": "1214345454495782",
+      "title": "PC 게임 설치 및 패치 ",
+      "assignee": "",
+      "due_on": "2026-04-27",
+      "completed": true,
+      "status": "done",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345454495782"
+    },
+    {
+      "gid": "1214345716244890",
+      "title": "아이폰 발열/최적화 대응 (/w 애플 컨설팅)",
+      "assignee": "황우형",
+      "due_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "최적화",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214345716244890"
+    },
+    {
+      "gid": "1214345716244899",
+      "title": "사전 캐릭터 생성 이벤트 준비 ",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "론칭 스펙 관련 확인",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345716244899"
+    },
+    {
+      "gid": "1214345716244903",
+      "title": "텍스트 탐지 기능 ",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "론칭 스펙 관련 확인",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345716244903"
+    },
+    {
+      "gid": "1214345716244905",
+      "title": "캐릭터 삭제 유예 기간 확인 ",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "론칭 스펙 관련 확인",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345716244905"
+    },
+    {
+      "gid": "1213905094128770",
+      "title": "[TW] 슬로건 로고 중국어(번체) 적용 작업 요청서",
+      "assignee": "현승은",
+      "due_on": "2026-04-27",
+      "completed": true,
+      "status": "done",
+      "section": "마케팅 관련",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213905094128770"
+    },
+    {
+      "gid": "1214343698463900",
+      "title": "대만 런칭 영상 작업",
+      "assignee": "",
+      "due_on": "2026-07-22",
+      "completed": false,
+      "status": "todo",
+      "section": "마케팅 관련",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214343698463900"
+    },
+    {
+      "gid": "1212974953090117",
+      "title": "[TW_0331][Global] 피처 스위치 ON/OFF 기능",
+      "assignee": "",
+      "due_on": "2026-03-31",
+      "completed": false,
+      "status": "overdue",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208935508758522/task/1212974953090117"
+    },
+    {
+      "gid": "1213826373013136",
+      "title": "[TW_0427] 피처 스위치 ON/OFF",
+      "assignee": "",
+      "due_on": "2026-04-27",
+      "completed": false,
+      "status": "overdue",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213826373013136"
+    },
+    {
+      "gid": "1213905094128761",
+      "title": "[TW] 던바튼 야시장 컨셉 레벨 제작 아트 요청",
+      "assignee": "현승은",
+      "due_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213905094128761"
+    },
+    {
+      "gid": "1214106534228870",
+      "title": "[TW_0526] 촬영 모드 워터마크 변경 작업 요청서",
+      "assignee": "현승은",
+      "due_on": "2026-05-26",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214106534228870"
+    },
+    {
+      "gid": "1213564322568711",
+      "title": "[TW] 타이틀씬 배경 & BGM 적용 요청서",
+      "assignee": "현승은",
+      "due_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213564322568711"
+    },
+    {
+      "gid": "1213564322568705",
+      "title": "[TW] 타이틀 로고 적용 요청서",
+      "assignee": "현승은",
+      "due_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213564322568705"
+    },
+    {
+      "gid": "1213564322568703",
+      "title": "[TW] 앱 아이콘 적용 요청서",
+      "assignee": "현승은",
+      "due_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213564322568703"
+    },
+    {
+      "gid": "1213818705690722",
+      "title": "[TW_0526] 연인 관계 의상 연출 기능 구현",
+      "assignee": "현승은",
+      "due_on": "2026-05-26",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213818705690722"
+    },
+    {
+      "gid": "1214002616318943",
+      "title": "[TW_0526] 새싹 모험가 숙련 유저 조건 - 던전 참조 로직 개선 요청",
+      "assignee": "현승은",
+      "due_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214002616318943"
+    },
+    {
+      "gid": "1213742032011214",
+      "title": "[TW_0526] 넥슨 나우 글로벌 실측 확률 연동 작업",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213742032011214"
+    },
+    {
+      "gid": "1213961844547642",
+      "title": "[v3.0_0625] 전설 패션 확정 승급 기능",
+      "assignee": "윤대의",
+      "due_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213961844547642"
+    },
+    {
+      "gid": "1212511675694495",
+      "title": "[v3.0_0625A] 패션/펫 천장 구조 기획",
+      "assignee": "윤대의",
+      "due_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1212511675694495"
+    },
+    {
+      "gid": "1213718089540021",
+      "title": "[TW_0427] 대만 빌드 - 한국어 보이스 자막 적용",
+      "assignee": "신민지",
+      "due_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213718089540021"
+    },
+    {
       "gid": "1214246612945102",
       "title": "NDR 셋업",
       "assignee": "",
-      "due_on": "",
+      "due_on": "2026-04-28",
       "completed": false,
       "status": "todo",
       "section": "기타 논의 및 일정",
@@ -220,23 +470,122 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807278"
     },
     {
+      "gid": "1214345716244899",
+      "title": "사전 캐릭터 생성 이벤트 준비 ",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "론칭 스펙 관련 확인",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345716244899"
+    },
+    {
+      "gid": "1214345716244903",
+      "title": "텍스트 탐지 기능 ",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "론칭 스펙 관련 확인",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345716244903"
+    },
+    {
+      "gid": "1214345716244905",
+      "title": "캐릭터 삭제 유예 기간 확인 ",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "론칭 스펙 관련 확인",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345716244905"
+    },
+    {
+      "gid": "1214343698463900",
+      "title": "대만 런칭 영상 작업",
+      "assignee": "",
+      "due_on": "2026-07-22",
+      "completed": false,
+      "status": "todo",
+      "section": "마케팅 관련",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214343698463900"
+    },
+    {
+      "gid": "1212974953090117",
+      "title": "[TW_0331][Global] 피처 스위치 ON/OFF 기능",
+      "assignee": "",
+      "due_on": "2026-03-31",
+      "completed": false,
+      "status": "overdue",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208935508758522/task/1212974953090117"
+    },
+    {
+      "gid": "1213826373013136",
+      "title": "[TW_0427] 피처 스위치 ON/OFF",
+      "assignee": "",
+      "due_on": "2026-04-27",
+      "completed": false,
+      "status": "overdue",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213826373013136"
+    },
+    {
+      "gid": "1213742032011214",
+      "title": "[TW_0526] 넥슨 나우 글로벌 실측 확률 연동 작업",
+      "assignee": "",
+      "due_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213742032011214"
+    },
+    {
       "gid": "1214246612945102",
       "title": "NDR 셋업",
       "assignee": "",
-      "due_on": "",
+      "due_on": "2026-04-28",
       "completed": false,
       "status": "todo",
       "section": "기타 논의 및 일정",
       "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214246612945102"
     }
   ],
-  "overdue": [],
-  "owner_counts": {},
+  "overdue": [
+    {
+      "gid": "1212974953090117",
+      "title": "[TW_0331][Global] 피처 스위치 ON/OFF 기능",
+      "assignee": "",
+      "due_on": "2026-03-31",
+      "completed": false,
+      "status": "overdue",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208935508758522/task/1212974953090117"
+    },
+    {
+      "gid": "1213826373013136",
+      "title": "[TW_0427] 피처 스위치 ON/OFF",
+      "assignee": "",
+      "due_on": "2026-04-27",
+      "completed": false,
+      "status": "overdue",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213826373013136"
+    }
+  ],
+  "owner_counts": {
+    "이지수": 2,
+    "임재훈": 2,
+    "황우형": 1,
+    "현승은": 7,
+    "윤대의": 2,
+    "신민지": 1
+  },
   "sections": [
     "주요 일정",
     "서비스 연동 작업",
     "최적화",
-    "론칭 작업 관련",
+    "론칭 스펙 관련 확인",
+    "마케팅 관련",
     "글로벌 라전팀 담당 작업",
     "기타 논의 및 일정"
   ]
