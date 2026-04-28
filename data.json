@@ -1,15 +1,15 @@
 {
-  "synced_at": "2026-04-28 13:34 KST",
+  "synced_at": "2026-04-28 16:23 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 37,
-  "done": 6,
-  "done_rate": 16,
-  "overdue_count": 2,
+  "done": 7,
+  "done_rate": 19,
+  "overdue_count": 3,
   "tasks": [
     {
       "gid": "1214287009807248",
-      "title": "4월 플레이어블 빌드 to 사업팀 (번체 폰트 적용)",
+      "title": "[일정] 4월 플레이어블 빌드 to 사업팀 (번체 폰트 적용)",
       "assignee": "원도환",
       "due_on": "2026-04-10",
       "completed": true,
@@ -19,7 +19,7 @@
     },
     {
       "gid": "1214287009807262",
-      "title": "4월 사내 테스트 빌드 ",
+      "title": "[일정] 4월 사내 테스트 빌드 ",
       "assignee": "원도환",
       "due_on": "2026-04-17",
       "completed": true,
@@ -29,7 +29,7 @@
     },
     {
       "gid": "1214287009807260",
-      "title": "초도 검수 QA 시작",
+      "title": "[일정] 초도 검수 QA 시작",
       "assignee": "원도환",
       "due_on": "2026-05-08",
       "completed": false,
@@ -39,7 +39,7 @@
     },
     {
       "gid": "1214287009807268",
-      "title": "초도 검수 제출",
+      "title": "[일정] 초도 검수 제출",
       "assignee": "원도환",
       "due_on": "2026-05-15",
       "completed": false,
@@ -49,7 +49,7 @@
     },
     {
       "gid": "1214287009807258",
-      "title": "부하 테스트 (5월 말 ~ 6월 초) ",
+      "title": "[일정] 부하 테스트 (5월 말 ~ 6월 초) ",
       "assignee": "원도환",
       "due_on": "",
       "completed": false,
@@ -59,7 +59,7 @@
     },
     {
       "gid": "1214287009807256",
-      "title": "사전 등록 빌드 검수 제출",
+      "title": "[일정] 사전 등록 빌드 검수 제출",
       "assignee": "원도환",
       "due_on": "2026-06-09",
       "completed": false,
@@ -69,7 +69,7 @@
     },
     {
       "gid": "1214287009807270",
-      "title": "사전 등록 시작",
+      "title": "[일정] 사전 등록 시작",
       "assignee": "원도환",
       "due_on": "2026-06-24",
       "completed": false,
@@ -79,7 +79,7 @@
     },
     {
       "gid": "1214287009807254",
-      "title": "대만 론칭 빌드 검수 제출 ",
+      "title": "[일정] 대만 론칭 빌드 검수 제출 ",
       "assignee": "원도환",
       "due_on": "2026-07-08",
       "completed": false,
@@ -89,7 +89,7 @@
     },
     {
       "gid": "1214287009807274",
-      "title": "사전 다운로드",
+      "title": "[일정] 사전 다운로드",
       "assignee": "원도환",
       "due_on": "2026-07-20",
       "completed": false,
@@ -99,7 +99,7 @@
     },
     {
       "gid": "1214287009807276",
-      "title": "캐릭터 사전 생성",
+      "title": "[일정] 캐릭터 사전 생성",
       "assignee": "원도환",
       "due_on": "2026-07-20",
       "completed": false,
@@ -109,7 +109,7 @@
     },
     {
       "gid": "1214287009807278",
-      "title": "대만 론칭 (대만 00시, 한국 01시)",
+      "title": "[일정] 대만 론칭 (대만 00시, 한국 01시)",
       "assignee": "원도환",
       "due_on": "2026-07-22",
       "completed": false,
@@ -190,12 +190,12 @@
     {
       "gid": "1214345716244899",
       "title": "사전 캐릭터 생성 이벤트 준비 ",
-      "assignee": "",
+      "assignee": "이지수",
       "due_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "progress",
       "section": "론칭 스펙 관련 확인",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345716244899"
+      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1214345716244899"
     },
     {
       "gid": "1214345716244903",
@@ -281,7 +281,7 @@
       "gid": "1213564322568711",
       "title": "[TW] 타이틀씬 배경 & BGM 적용 요청서",
       "assignee": "현승은",
-      "due_on": "",
+      "due_on": "2026-05-26",
       "completed": false,
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
@@ -291,7 +291,7 @@
       "gid": "1213564322568705",
       "title": "[TW] 타이틀 로고 적용 요청서",
       "assignee": "현승은",
-      "due_on": "",
+      "due_on": "2026-05-08",
       "completed": false,
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
@@ -301,7 +301,7 @@
       "gid": "1213564322568703",
       "title": "[TW] 앱 아이콘 적용 요청서",
       "assignee": "현승은",
-      "due_on": "",
+      "due_on": "2026-05-08",
       "completed": false,
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
@@ -321,7 +321,7 @@
       "gid": "1214002616318943",
       "title": "[TW_0526] 새싹 모험가 숙련 유저 조건 - 던전 참조 로직 개선 요청",
       "assignee": "현승은",
-      "due_on": "",
+      "due_on": "2026-05-26",
       "completed": false,
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
@@ -331,7 +331,7 @@
       "gid": "1213742032011214",
       "title": "[TW_0526] 넥슨 나우 글로벌 실측 확률 연동 작업",
       "assignee": "",
-      "due_on": "",
+      "due_on": "2026-05-26",
       "completed": false,
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
@@ -342,8 +342,8 @@
       "title": "[v3.0_0625] 전설 패션 확정 승급 기능",
       "assignee": "윤대의",
       "due_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213961844547642"
     },
@@ -351,7 +351,7 @@
       "gid": "1212511675694495",
       "title": "[v3.0_0625A] 패션/펫 천장 구조 기획",
       "assignee": "윤대의",
-      "due_on": "",
+      "due_on": "2026-05-26",
       "completed": false,
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
@@ -361,9 +361,9 @@
       "gid": "1213718089540021",
       "title": "[TW_0427] 대만 빌드 - 한국어 보이스 자막 적용",
       "assignee": "신민지",
-      "due_on": "",
+      "due_on": "2026-04-27",
       "completed": false,
-      "status": "progress",
+      "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213718089540021"
     },
@@ -379,16 +379,6 @@
     }
   ],
   "no_assignee": [
-    {
-      "gid": "1214345716244899",
-      "title": "사전 캐릭터 생성 이벤트 준비 ",
-      "assignee": "",
-      "due_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "론칭 스펙 관련 확인",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345716244899"
-    },
     {
       "gid": "1214343698463900",
       "title": "대만 런칭 영상 작업",
@@ -423,7 +413,7 @@
       "gid": "1213742032011214",
       "title": "[TW_0526] 넥슨 나우 글로벌 실측 확률 연동 작업",
       "assignee": "",
-      "due_on": "",
+      "due_on": "2026-05-26",
       "completed": false,
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
@@ -460,16 +450,26 @@
       "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213826373013136"
+    },
+    {
+      "gid": "1213718089540021",
+      "title": "[TW_0427] 대만 빌드 - 한국어 보이스 자막 적용",
+      "assignee": "신민지",
+      "due_on": "2026-04-27",
+      "completed": false,
+      "status": "overdue",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213718089540021"
     }
   ],
   "owner_counts": {
     "원도환": 9,
-    "이지수": 2,
+    "이지수": 3,
     "임재훈": 2,
     "황우형": 1,
     "박경남": 1,
     "현승은": 7,
-    "윤대의": 2,
+    "윤대의": 1,
     "신민지": 1
   },
   "sections": [
