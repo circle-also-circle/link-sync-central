@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-04-28 16:23 KST",
+  "synced_at": "2026-04-28 18:37 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 37,
+  "total": 38,
   "done": 7,
-  "done_rate": 19,
+  "done_rate": 18,
   "overdue_count": 3,
   "tasks": [
     {
@@ -238,9 +238,19 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214343698463900"
     },
     {
+      "gid": "1214245794497487",
+      "title": "[TW] 캐릭터 이름 생성 규칙 정리",
+      "assignee": "이지수",
+      "due_on": "2026-04-28",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1214245794497487"
+    },
+    {
       "gid": "1212974953090117",
       "title": "[TW_0331][Global] 피처 스위치 ON/OFF 기능",
-      "assignee": "",
+      "assignee": "신민지",
       "due_on": "2026-03-31",
       "completed": false,
       "status": "overdue",
@@ -370,12 +380,12 @@
     {
       "gid": "1214246612945102",
       "title": "NDR 셋업",
-      "assignee": "",
+      "assignee": "원도환",
       "due_on": "2026-04-28",
       "completed": false,
-      "status": "todo",
+      "status": "progress",
       "section": "기타 논의 및 일정",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214246612945102"
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214246612945102"
     }
   ],
   "no_assignee": [
@@ -388,16 +398,6 @@
       "status": "todo",
       "section": "마케팅 관련",
       "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214343698463900"
-    },
-    {
-      "gid": "1212974953090117",
-      "title": "[TW_0331][Global] 피처 스위치 ON/OFF 기능",
-      "assignee": "",
-      "due_on": "2026-03-31",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1208935508758522/task/1212974953090117"
     },
     {
       "gid": "1213826373013136",
@@ -418,23 +418,13 @@
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213742032011214"
-    },
-    {
-      "gid": "1214246612945102",
-      "title": "NDR 셋업",
-      "assignee": "",
-      "due_on": "2026-04-28",
-      "completed": false,
-      "status": "todo",
-      "section": "기타 논의 및 일정",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214246612945102"
     }
   ],
   "overdue": [
     {
       "gid": "1212974953090117",
       "title": "[TW_0331][Global] 피처 스위치 ON/OFF 기능",
-      "assignee": "",
+      "assignee": "신민지",
       "due_on": "2026-03-31",
       "completed": false,
       "status": "overdue",
@@ -463,14 +453,14 @@
     }
   ],
   "owner_counts": {
-    "원도환": 9,
-    "이지수": 3,
+    "원도환": 10,
+    "이지수": 4,
     "임재훈": 2,
     "황우형": 1,
     "박경남": 1,
+    "신민지": 2,
     "현승은": 7,
-    "윤대의": 1,
-    "신민지": 1
+    "윤대의": 1
   },
   "sections": [
     "주요 일정",
