@@ -626,11 +626,15 @@ function renderGantt(d) {
   const dues  = dated.map(t => new Date(t.due_on));
   const today = new Date(); today.setHours(0,0,0,0);
 
-  // 범위: 오늘 기준 과거 ~ 가장 늦은 마감일 + 여유
-  let rangeStart = new Date(Math.min(...dues, today));
+  // start_on 있는 태스크의 시작일도 범위에 포함
+  const starts = d.tasks.filter(t => t.start_on).map(t => new Date(t.start_on));
+  const allDates = [...dues, ...starts, today];
+
+  // 범위: 가장 이른 날짜 ~ 가장 늦은 마감일 + 여유
+  let rangeStart = new Date(Math.min(...allDates));
   let rangeEnd   = new Date(Math.max(...dues));
-  rangeStart.setDate(rangeStart.getDate() - (ganttZoom === 'week' ? 3 : 7));
-  rangeEnd.setDate(rangeEnd.getDate()     + (ganttZoom === 'week' ? 5 : 14));
+  rangeStart.setDate(rangeStart.getDate() - (ganttZoom === 'week' ? 7  : 14));
+  rangeEnd.setDate(rangeEnd.getDate()     + (ganttZoom === 'week' ? 10 : 21));
 
   const totalDays = Math.ceil((rangeEnd - rangeStart) / 86400000);
   const LABEL_W   = 160; // px — 왼쪽 레이블 너비
@@ -705,13 +709,22 @@ function renderGantt(d) {
       let barX, barW;
       if (t.start_on) {
         const start = new Date(t.start_on); start.setHours(0,0,0,0);
-        barX = Math.max(0, toPx(start));
-        barW = Math.max(dueX - barX + DAY_W, 6);
+        const rawBarX = toPx(start);
+        const rawBarEnd = dueX + DAY_W;
+        barX = Math.max(0, rawBarX);
+        barW = Math.max(rawBarEnd - barX, 6);
       } else {
         const BAR_DAYS = t.is_subtask ? 1 : (t.status === 'done' ? 3 : t.status === 'overdue' ? 5 : 4);
         barW = Math.max(DAY_W * BAR_DAYS, 6);
-        barX = Math.max(0, dueX - barW + DAY_W);
+        // dueX가 음수(범위 밖)면 0으로 클리핑
+        const rawBarX = dueX - barW + DAY_W;
+        barX = Math.max(0, rawBarX);
+        // barX가 trackW 이상이면 표시 스킵 처리용 플래그
       }
+      // 완전히 범위 밖인 경우 최소 표시
+      if (barX >= trackW) barX = trackW - 6;
+      barW = Math.min(barW, trackW - barX);
+      barW = Math.max(barW, 6);
       const cls    = t.status || 'todo';
       const label  = barW > 40 ? (t.is_subtask ? '↳ '+t.title.replace(/^↳\s*/,'') : t.title) : '';
       const labelCls = t.is_subtask ? 'gantt-label is-sub' : 'gantt-label';
