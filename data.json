@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-29 10:28 KST",
+  "synced_at": "2026-04-29 10:49 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 111,
@@ -218,11 +218,11 @@
     {
       "gid": "1214210652658296",
       "title": "↳ [TW_0526][v3.0_0625A] IAP OFFER CODE 연동 작업 ",
-      "assignee": "",
+      "assignee": "권혁인",
       "due_on": "2026-05-26",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "progress",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214210652658296",
       "is_subtask": true,
@@ -1479,19 +1479,6 @@
       "parent_title": "[v3.0_0625A][대만런칭] 구글 OOAP 연동 작업 요청"
     },
     {
-      "gid": "1214210652658296",
-      "title": "↳ [TW_0526][v3.0_0625A] IAP OFFER CODE 연동 작업 ",
-      "assignee": "",
-      "due_on": "2026-05-26",
-      "start_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "서비스 연동 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214210652658296",
-      "is_subtask": true,
-      "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
-    },
-    {
       "gid": "1214345527347152",
       "title": "[피니셔팀] 숫자 폰트 프록시꼬 폰트로 변경 적용",
       "assignee": "",
@@ -1822,7 +1809,7 @@
   "owner_counts": {
     "원도환": 9,
     "이지수": 4,
-    "권혁인": 1,
+    "권혁인": 2,
     "임재훈": 3,
     "황우형": 1,
     "박경남": 1,
