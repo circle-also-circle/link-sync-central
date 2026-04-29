@@ -68,7 +68,7 @@ jobs:
           section_map = {s["gid"]: s["name"] for s in sections}
 
           # ── 태스크 목록 ───────────────────────────────────────────
-          fields = "name,assignee.name,due_on,completed,memberships.section.gid,permalink_url,num_subtasks"
+          fields = "name,assignee.name,due_on,start_on,completed,memberships.section.gid,permalink_url,num_subtasks"
           tasks_raw = asana_get(f"/projects/{PROJECT_ID}/tasks?opt_fields={fields}&limit=100")
 
           tasks = []
@@ -97,6 +97,7 @@ jobs:
                   "title":        display_title,
                   "assignee":     assignee,
                   "due_on":       due_on,
+                  "start_on":     t.get("start_on") or "",
                   "completed":    completed,
                   "status":       status,
                   "section":      section,
@@ -105,7 +106,7 @@ jobs:
                   "parent_title": parent_title or "",
               }
 
-          sub_fields = "name,assignee.name,due_on,completed,permalink_url"
+          sub_fields = "name,assignee.name,due_on,start_on,completed,permalink_url"
 
           for t in tasks_raw:
               # 섹션 이름 추출
