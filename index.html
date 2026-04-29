@@ -611,150 +611,116 @@ function setGanttZoom(zoom, btn) {
 
 function renderGantt(data) {
   const wrap = document.getElementById('ganttChart');
-  if (!data.tasks || !data.tasks.length) {
-    wrap.innerHTML = '<div class="gantt-empty">태스크 데이터가 없습니다</div>';
-    return;
-  }
+  wrap.innerHTML = '';
 
-  const dated = data.tasks.filter(t => t.due_on && t.due_on.trim());
+  const dated = (data.tasks || []).filter(t => t.due_on && t.due_on.length === 10);
   if (!dated.length) {
     wrap.innerHTML = '<div class="gantt-empty">마감일이 설정된 태스크가 없습니다</div>';
+    document.getElementById('ganttRange').textContent = '—';
     return;
   }
 
   const DAY_MS  = 86400000;
   const LABEL_W = 180;
-  const DAY_W   = ganttZoom === 'week' ? 26 : 13;
+  const DAY_W   = ganttZoom === 'week' ? 28 : 14;
 
   const today = new Date(); today.setHours(0,0,0,0);
 
-  // 날짜 범위 계산 — start_on / due_on 모두 포함
-  const allMs = [];
-  data.tasks.forEach(t => {
-    if (t.due_on)   allMs.push(new Date(t.due_on).getTime());
-    if (t.start_on) allMs.push(new Date(t.start_on).getTime());
-  });
-  allMs.push(today.getTime());
+  // 마감일 범위만으로 계산
+  const dueMs = dated.map(t => new Date(t.due_on).setHours(0,0,0,0));
+  const minMs = Math.min(...dueMs, today.getTime());
+  const maxMs = Math.max(...dueMs);
 
-  const minMs = Math.min(...allMs);
-  const maxMs = Math.max(...allMs);
+  const pad = ganttZoom === 'week' ? 7 : 14;
+  const RS = new Date(minMs - pad * DAY_MS); RS.setHours(0,0,0,0);
+  const RE = new Date(maxMs + pad * DAY_MS); RE.setHours(0,0,0,0);
 
-  // 여유 날짜
-  const padStart = ganttZoom === 'week' ? 7  : 14;
-  const padEnd   = ganttZoom === 'week' ? 10 : 21;
-  const rangeStart = new Date(minMs - padStart * DAY_MS); rangeStart.setHours(0,0,0,0);
-  const rangeEnd   = new Date(maxMs + padEnd   * DAY_MS); rangeEnd.setHours(0,0,0,0);
-
-  const totalDays = Math.ceil((rangeEnd - rangeStart) / DAY_MS);
+  const totalDays = Math.round((RE - RS) / DAY_MS) + 1;
   const trackW    = totalDays * DAY_W;
 
-  // 날짜 → px (변수명 충돌 없음)
-  function toPx(dateStr) {
-    const dt = new Date(dateStr); dt.setHours(0,0,0,0);
-    return Math.round((dt.getTime() - rangeStart.getTime()) / DAY_MS * DAY_W);
+  function px(isoStr) {
+    const ms = new Date(isoStr).setHours(0,0,0,0);
+    return Math.round((ms - RS.getTime()) / DAY_MS * DAY_W);
   }
 
-  const todayX = toPx(today.toISOString().slice(0,10));
+  const todayX = px(today.toISOString().slice(0,10));
 
-  // 헤더 눈금 생성
+  // 날짜 눈금
   const step = ganttZoom === 'week' ? 1 : 3;
-  const headerCells = [];
-  const cur = new Date(rangeStart);
-  while (cur <= rangeEnd) {
-    const x = toPx(cur.toISOString().slice(0,10));
-    const isToday = cur.toDateString() === today.toDateString();
-    const lbl = ganttZoom === 'week'
-      ? `${cur.getMonth()+1}/${cur.getDate()}`
-      : `${cur.getDate()}`;
-    headerCells.push({ x, lbl, isToday });
-    cur.setDate(cur.getDate() + step);
+  let ticks = '';
+  const c = new Date(RS);
+  while (c <= RE) {
+    const x = px(c.toISOString().slice(0,10));
+    const isT = c.toDateString() === today.toDateString();
+    ticks += `<div style="position:absolute;left:${x}px;top:0;bottom:0;width:1px;background:${isT?'rgba(240,82,82,0.4)':'rgba(255,255,255,0.07)'}"></div>`;
+    ticks += `<div style="position:absolute;left:${x}px;top:5px;transform:translateX(-50%);font-size:9px;font-family:var(--mono);color:${isT?'var(--red)':'var(--text3)'};white-space:nowrap">${c.getMonth()+1}/${c.getDate()}</div>`;
+    c.setDate(c.getDate() + step);
   }
 
-  // 섹션별 그룹핑
-  const sectionOrder = data.sections && data.sections.length ? data.sections : ['기타'];
-  const tasksBySec = {};
-  sectionOrder.forEach(s => { tasksBySec[s] = []; });
-
-  data.tasks.forEach(t => {
-    if (!t.due_on || !t.due_on.trim()) return;
-    const sec = t.section || '기타';
-    if (!tasksBySec[sec]) tasksBySec[sec] = [];
-    tasksBySec[sec].push(t);
+  // 섹션 그룹핑
+  const secOrder = (data.sections && data.sections.length) ? data.sections : ['기타'];
+  const byS = {};
+  secOrder.forEach(s => { byS[s] = []; });
+  dated.forEach(t => {
+    const s = t.section || '기타';
+    if (!byS[s]) byS[s] = [];
+    byS[s].push(t);
   });
 
-  // ── HTML 조립 ────────────────────────────────────────────────────
-  // 헤더
-  let headerHTML = `
-    <div style="display:flex;position:sticky;top:0;z-index:10;background:var(--bg2);border-bottom:1px solid var(--border)">
-      <div style="width:${LABEL_W}px;flex-shrink:0;font-size:10px;color:var(--text3);font-family:var(--mono);padding:5px 8px">태스크</div>
-      <div style="position:relative;flex:1;height:28px;min-width:${trackW}px;overflow:hidden">`;
-  headerCells.forEach(c => {
-    headerHTML += `<div style="position:absolute;left:${c.x}px;top:0;bottom:0;width:1px;background:${c.isToday?'rgba(240,82,82,0.35)':'var(--border)'}"></div>`;
-    headerHTML += `<div style="position:absolute;left:${c.x}px;top:7px;font-size:9px;color:${c.isToday?'var(--red)':'var(--text3)'};font-family:var(--mono);transform:translateX(-50%);white-space:nowrap">${c.lbl}</div>`;
-  });
-  headerHTML += `</div></div>`;
+  // 상태별 핀 색상
+  const pinColor = {
+    done:     '#1fcf8e',
+    progress: '#f5a623',
+    overdue:  '#f05252',
+    todo:     '#555860'
+  };
 
-  // 바디 행
-  let bodyHTML = '';
-  sectionOrder.forEach(sec => {
-    const tasks = tasksBySec[sec];
+  let rows = '';
+  secOrder.forEach(sec => {
+    const tasks = byS[sec];
     if (!tasks || !tasks.length) return;
 
-    // 섹션 구분 행
-    bodyHTML += `<div style="display:flex;background:rgba(255,255,255,0.025);border-top:1px solid var(--border)">
-      <div style="padding:6px 8px 3px;font-size:10px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;width:100%">${escHtml(sec)}</div>
+    rows += `<div style="display:flex;background:rgba(255,255,255,0.02);border-top:1px solid var(--border)">
+      <div style="padding:6px 8px 3px;font-size:10px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.5px">${escHtml(sec)}</div>
     </div>`;
 
     tasks.forEach(t => {
-      const dueX = toPx(t.due_on);
+      const x = px(t.due_on);
+      const rawTitle = t.is_subtask ? t.title.replace(/^↳\s*/,'') : t.title;
+      const dueDate  = new Date(t.due_on);
+      const dueLabel = `${dueDate.getMonth()+1}/${dueDate.getDate()}`;
+      const color    = pinColor[t.status] || pinColor.todo;
+      const tooltip  = escHtml(`${rawTitle} — 마감 ${dueLabel}`);
+      const indent   = t.is_subtask ? 16 : 4;
 
-      let barX, barW;
-      if (t.start_on && t.start_on.trim()) {
-        // start_on 있으면 실제 기간
-        barX = toPx(t.start_on);
-        barW = Math.max(dueX - barX + DAY_W, 6);
-      } else {
-        // 마감일 기준으로 역산 — 상태별 기본 기간
-        const days = t.is_subtask ? 1 : (t.status==='done' ? 3 : t.status==='overdue' ? 5 : 4);
-        barW = Math.max(DAY_W * days, 6);
-        barX = dueX - barW + DAY_W;
-      }
-
-      // 화면 밖 클리핑
-      if (barX < 0) { barW = Math.max(barW + barX, 6); barX = 0; }
-      if (barX + barW > trackW) barW = Math.max(trackW - barX, 6);
-      barW = Math.max(barW, 6);
-
-      const cls       = t.status || 'todo';
-      const isSubtask = t.is_subtask;
-      const rawTitle  = isSubtask ? t.title.replace(/^↳\s*/,'') : t.title;
-      const dueLabel  = `${new Date(t.due_on).getMonth()+1}/${new Date(t.due_on).getDate()}`;
-      const barLabel  = barW > 50 ? rawTitle.slice(0,28) : '';
-      const tooltip   = `${rawTitle} — 마감 ${dueLabel}`;
-
-      bodyHTML += `
-        <div class="gantt-row-wrap" style="display:flex;min-height:34px;align-items:center;border-bottom:1px solid rgba(255,255,255,0.03)" title="${escHtml(tooltip)}">
-          <div style="width:${LABEL_W}px;flex-shrink:0;font-size:${isSubtask?'10':'11'}px;color:${isSubtask?'var(--text3)':'var(--text2)'};padding:0 8px 0 ${isSubtask?16:4}px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:default">
-            ${isSubtask?'↳ ':''}${escHtml(rawTitle)}
+      rows += `
+        <div style="display:flex;align-items:center;min-height:32px;border-bottom:1px solid rgba(255,255,255,0.03)" title="${tooltip}">
+          <div style="width:${LABEL_W}px;flex-shrink:0;font-size:${t.is_subtask?10:11}px;color:${t.is_subtask?'var(--text3)':'var(--text2)'};padding:0 8px 0 ${indent}px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+            ${t.is_subtask?'↳ ':''}${escHtml(rawTitle)}
           </div>
-          <div style="position:relative;flex:1;height:34px;min-width:${trackW}px;overflow:hidden">
-            <div style="position:absolute;left:${todayX}px;top:0;bottom:0;width:1px;background:var(--red);opacity:.5;z-index:1"></div>
-            <div class="gantt-bar ${escHtml(cls)}"
-              style="position:absolute;left:${barX}px;width:${barW}px;top:7px;height:20px;z-index:2"
+          <div style="position:relative;height:32px;width:${trackW}px;flex-shrink:0;overflow:visible">
+            <div style="position:absolute;left:${todayX}px;top:0;bottom:0;width:1px;background:var(--red);opacity:.4"></div>
+            <div style="position:absolute;left:${x}px;top:50%;transform:translate(-50%,-50%);cursor:pointer;z-index:2"
               onclick="${t.url ? `window.open('${t.url}','_blank')` : ''}">
-              ${barLabel ? escHtml(barLabel) : ''}
+              <div style="width:10px;height:10px;border-radius:50%;background:${color};box-shadow:0 0 0 2px rgba(0,0,0,0.4)"></div>
+              <div style="position:absolute;left:50%;transform:translateX(-50%);top:13px;font-size:8px;color:${color};font-family:var(--mono);white-space:nowrap">${dueLabel}</div>
             </div>
           </div>
         </div>`;
     });
   });
 
-  wrap.innerHTML = headerHTML + `<div>${bodyHTML}</div>`;
+  wrap.innerHTML = `
+    <div style="display:flex;position:sticky;top:0;z-index:10;background:var(--bg2);border-bottom:1px solid var(--border)">
+      <div style="width:${LABEL_W}px;flex-shrink:0;padding:5px 8px;font-size:10px;color:var(--text3);font-family:var(--mono)">태스크</div>
+      <div style="position:relative;width:${trackW}px;height:26px;flex-shrink:0">${ticks}</div>
+    </div>
+    <div>${rows}</div>`;
 
-  // 범위 레이블 업데이트
   const fmt = dt => `${dt.getMonth()+1}/${dt.getDate()}`;
-  document.getElementById('ganttRange').textContent = `${fmt(rangeStart)} ~ ${fmt(rangeEnd)}`;
+  document.getElementById('ganttRange').textContent = `${fmt(RS)} ~ ${fmt(RE)}`;
 }
+
 
 loadData();
 setInterval(loadData, 600000);
