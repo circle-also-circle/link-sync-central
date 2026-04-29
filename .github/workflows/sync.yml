@@ -2,8 +2,7 @@ name: Sync Asana Data
 
 on:
   schedule:
-    - cron: '0 1 * * *'   # 매일 오전 10시 KST (UTC+9)
-
+    - cron: '0 * * * *'   # 매시 정각 (1시간마다)
   workflow_dispatch:       # 수동 실행 버튼
 
 jobs:
@@ -69,12 +68,44 @@ jobs:
           section_map = {s["gid"]: s["name"] for s in sections}
 
           # ── 태스크 목록 ───────────────────────────────────────────
-          fields = "name,assignee.name,due_on,completed,memberships.section.gid,notes,permalink_url,custom_fields"
+          fields = "name,assignee.name,due_on,completed,memberships.section.gid,permalink_url,num_subtasks"
           tasks_raw = asana_get(f"/projects/{PROJECT_ID}/tasks?opt_fields={fields}&limit=100")
 
           tasks = []
           no_assignee = []
           overdue     = []
+
+          def make_task(t, section, parent_title=None):
+              assignee  = (t.get("assignee") or {}).get("name", "")
+              due_on    = t.get("due_on") or ""
+              completed = t.get("completed", False)
+              url       = t.get("permalink_url", "")
+              name      = t.get("name", "")
+
+              if completed:
+                  status = "done"
+              elif due_on and datetime.strptime(due_on, "%Y-%m-%d").date() < TODAY:
+                  status = "overdue"
+              else:
+                  status = "progress" if assignee else "todo"
+
+              # 하위 태스크는 제목 앞에 부모 태스크명을 표시
+              display_title = f"↳ {name}" if parent_title else name
+
+              return {
+                  "gid":          t["gid"],
+                  "title":        display_title,
+                  "assignee":     assignee,
+                  "due_on":       due_on,
+                  "completed":    completed,
+                  "status":       status,
+                  "section":      section,
+                  "url":          url,
+                  "is_subtask":   parent_title is not None,
+                  "parent_title": parent_title or "",
+              }
+
+          sub_fields = "name,assignee.name,due_on,completed,permalink_url"
 
           for t in tasks_raw:
               # 섹션 이름 추출
@@ -85,36 +116,26 @@ jobs:
                       section = section_map[sgid]
                       break
 
-              assignee  = (t.get("assignee") or {}).get("name", "")
-              due_on    = t.get("due_on") or ""
-              completed = t.get("completed", False)
-              url       = t.get("permalink_url", "")
-              name      = t.get("name", "")
-
-              # 상태 판별
-              if completed:
-                  status = "done"
-              elif due_on and datetime.strptime(due_on, "%Y-%m-%d").date() < TODAY:
-                  status = "overdue"
-              else:
-                  status = "progress" if assignee else "todo"
-
-              task = {
-                  "gid":       t["gid"],
-                  "title":     name,
-                  "assignee":  assignee,
-                  "due_on":    due_on,
-                  "completed": completed,
-                  "status":    status,
-                  "section":   section,
-                  "url":       url,
-              }
+              task = make_task(t, section)
               tasks.append(task)
 
-              # 이슈 플래그
-              if not assignee and not completed:
+              # 하위 태스크 수집 (num_subtasks > 0 인 경우만)
+              if t.get("num_subtasks", 0) > 0:
+                  try:
+                      subtasks_raw = asana_get(
+                          f"/tasks/{t['gid']}/subtasks?opt_fields={sub_fields}&limit=50"
+                      )
+                      for st in subtasks_raw:
+                          subtask = make_task(st, section, parent_title=t.get("name",""))
+                          tasks.append(subtask)
+                  except Exception as e:
+                      print(f"  경고: {t.get('name','')} 하위 태스크 조회 실패 - {e}")
+
+          # 이슈 플래그
+          for task in tasks:
+              if not task["assignee"] and not task["completed"]:
                   no_assignee.append(task)
-              if status == "overdue":
+              if task["status"] == "overdue":
                   overdue.append(task)
 
           # ── 완료율 계산 ────────────────────────────────────────────
