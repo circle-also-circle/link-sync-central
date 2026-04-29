@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-04-29 10:49 KST",
+  "synced_at": "2026-04-29 13:14 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 111,
-  "done": 42,
-  "done_rate": 38,
-  "overdue_count": 8,
+  "done": 43,
+  "done_rate": 39,
+  "overdue_count": 7,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -328,7 +328,7 @@
       "completed": false,
       "status": "progress",
       "section": "론칭 스펙 관련 확인",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345716244903",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214345716244903",
       "is_subtask": false,
       "parent_title": ""
     },
@@ -432,7 +432,7 @@
       "completed": false,
       "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1214245794497487",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214245794497487",
       "is_subtask": false,
       "parent_title": ""
     },
@@ -1066,8 +1066,8 @@
       "assignee": "이동헌",
       "due_on": "2026-04-27",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1201436090649243/task/1213978269410009",
       "is_subtask": true,
@@ -1710,7 +1710,7 @@
       "completed": false,
       "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1214245794497487",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214245794497487",
       "is_subtask": false,
       "parent_title": ""
     },
@@ -1752,19 +1752,6 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213826373013136",
       "is_subtask": false,
       "parent_title": ""
-    },
-    {
-      "gid": "1213978269410009",
-      "title": "↳ [TW] 타이틀 로고 적용 - UXM",
-      "assignee": "이동헌",
-      "due_on": "2026-04-27",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1201436090649243/task/1213978269410009",
-      "is_subtask": true,
-      "parent_title": "[TW] 타이틀 로고 적용 요청서"
     },
     {
       "gid": "1213977968621393",
@@ -1824,7 +1811,6 @@
     "현승은": 7,
     "기혜연": 1,
     "강은주": 1,
-    "이동헌": 1,
     "박선유": 1,
     "김창균": 1,
     "윤대의": 3,
