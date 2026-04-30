@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-30 16:54 KST",
+  "synced_at": "2026-04-30 22:10 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 111,
@@ -974,7 +974,7 @@
       "title": "↳ [TW] 촬영 모드 워터마크 변경 작업 요청",
       "assignee": "권성태",
       "due_on": "2026-05-18",
-      "start_on": "",
+      "start_on": "2026-05-01",
       "completed": false,
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
