@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-05-08 15:18 KST",
+  "synced_at": "2026-05-08 19:59 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 117,
-  "done": 57,
-  "done_rate": 49,
+  "done": 59,
+  "done_rate": 50,
   "overdue_count": 1,
   "tasks": [
     {
@@ -39,8 +39,8 @@
       "assignee": "원도환",
       "due_on": "2026-05-08",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "주요 일정",
       "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807260",
       "is_subtask": false,
@@ -1261,8 +1261,8 @@
       "assignee": "최아영",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1206838044009358/task/1214041904518345",
       "is_subtask": true,
@@ -1729,7 +1729,7 @@
     }
   ],
   "owner_counts": {
-    "원도환": 9,
+    "원도환": 8,
     "이지수": 3,
     "권혁인": 2,
     "한경민": 1,
@@ -1743,7 +1743,7 @@
     "유주원": 1,
     "신민지": 1,
     "장현우": 2,
-    "최아영": 3,
+    "최아영": 2,
     "이도현": 1,
     "조한석": 1,
     "김창균": 2,
