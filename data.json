@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-05-08 19:59 KST",
+  "synced_at": "2026-05-09 01:02 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 117,
   "done": 59,
   "done_rate": 50,
-  "overdue_count": 1,
+  "overdue_count": 2,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -920,7 +920,7 @@
     {
       "gid": "1213877409606968",
       "title": "↳ [피처 스위치] 사이드 게임 환경 설정 ON/OFF",
-      "assignee": "이도현",
+      "assignee": "박상열",
       "due_on": "",
       "start_on": "",
       "completed": false,
@@ -946,7 +946,7 @@
     {
       "gid": "1213744753223453",
       "title": "↳ [피처 스위치] 레이드: NPC ON/OFF",
-      "assignee": "장현우",
+      "assignee": "박상열",
       "due_on": "",
       "start_on": "",
       "completed": false,
@@ -985,7 +985,7 @@
     {
       "gid": "1214000534796314",
       "title": "↳ [피처 스위치] 미스틱 던전 ON/OFF",
-      "assignee": "김창균",
+      "assignee": "박상열",
       "due_on": "",
       "start_on": "",
       "completed": false,
@@ -1158,7 +1158,7 @@
       "due_on": "2026-05-08",
       "start_on": "",
       "completed": false,
-      "status": "progress",
+      "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213564322568703",
       "is_subtask": false,
@@ -1726,6 +1726,19 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213826373013136",
       "is_subtask": false,
       "parent_title": ""
+    },
+    {
+      "gid": "1213564322568703",
+      "title": "[TW] 앱 아이콘 적용 요청서",
+      "assignee": "현승은",
+      "due_on": "2026-05-08",
+      "start_on": "",
+      "completed": false,
+      "status": "overdue",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213564322568703",
+      "is_subtask": false,
+      "parent_title": ""
     }
   ],
   "owner_counts": {
@@ -1742,13 +1755,13 @@
     "현승은": 8,
     "유주원": 1,
     "신민지": 1,
-    "장현우": 2,
+    "장현우": 1,
     "최아영": 2,
-    "이도현": 1,
+    "박상열": 3,
     "조한석": 1,
-    "김창균": 2,
     "권성태": 1,
     "강은주": 1,
+    "김창균": 1,
     "윤대의": 3
   },
   "sections": [
