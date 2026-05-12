@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-05-12 07:34 KST",
+  "synced_at": "2026-05-12 17:14 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 129,
+  "total": 133,
   "done": 61,
-  "done_rate": 47,
+  "done_rate": 46,
   "overdue_count": 1,
   "tasks": [
     {
@@ -448,6 +448,58 @@
       "url": "https://app.asana.com/1/1199095400125716/task/1214343698463907",
       "is_subtask": true,
       "parent_title": "대만 런칭 영상 작업"
+    },
+    {
+      "gid": "1214149626235012",
+      "title": "대만 빌드 API 사용 컨텐츠 대응",
+      "assignee": "이지수",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214149626235012",
+      "is_subtask": false,
+      "parent_title": ""
+    },
+    {
+      "gid": "1214725702427102",
+      "title": "↳ [로직1] 대만 빌드 API 사용 컨텐츠 대응 - 친구 추천, 길드 추천 ",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214725702427102",
+      "is_subtask": true,
+      "parent_title": "대만 빌드 API 사용 컨텐츠 대응"
+    },
+    {
+      "gid": "1214725702427100",
+      "title": "↳ [로직2] 대만 빌드 API 사용 컨텐츠 대응 - 랭킹 시스템",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214725702427100",
+      "is_subtask": true,
+      "parent_title": "대만 빌드 API 사용 컨텐츠 대응"
+    },
+    {
+      "gid": "1214725702427098",
+      "title": "↳ [키메이커] 대만 빌드 API 사용 컨텐츠 대응 - 마이홈 추천",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214725702427098",
+      "is_subtask": true,
+      "parent_title": "대만 빌드 API 사용 컨텐츠 대응"
     },
     {
       "gid": "1214597754824008",
@@ -1752,6 +1804,45 @@
       "parent_title": "대만 런칭 영상 작업"
     },
     {
+      "gid": "1214725702427102",
+      "title": "↳ [로직1] 대만 빌드 API 사용 컨텐츠 대응 - 친구 추천, 길드 추천 ",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214725702427102",
+      "is_subtask": true,
+      "parent_title": "대만 빌드 API 사용 컨텐츠 대응"
+    },
+    {
+      "gid": "1214725702427100",
+      "title": "↳ [로직2] 대만 빌드 API 사용 컨텐츠 대응 - 랭킹 시스템",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214725702427100",
+      "is_subtask": true,
+      "parent_title": "대만 빌드 API 사용 컨텐츠 대응"
+    },
+    {
+      "gid": "1214725702427098",
+      "title": "↳ [키메이커] 대만 빌드 API 사용 컨텐츠 대응 - 마이홈 추천",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214725702427098",
+      "is_subtask": true,
+      "parent_title": "대만 빌드 API 사용 컨텐츠 대응"
+    },
+    {
       "gid": "1214677501500760",
       "title": "↳ [TW] 플레이힌트 글로벌 대응 작업",
       "assignee": "",
@@ -1912,7 +2003,7 @@
   ],
   "owner_counts": {
     "원도환": 8,
-    "이지수": 3,
+    "이지수": 4,
     "권혁인": 2,
     "한경민": 1,
     "임재훈": 2,
