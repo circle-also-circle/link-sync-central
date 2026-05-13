@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-05-13 17:21 KST",
+  "synced_at": "2026-05-14 02:22 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 133,
   "done": 60,
   "done_rate": 45,
-  "overdue_count": 1,
+  "overdue_count": 2,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -300,7 +300,7 @@
       "due_on": "2026-05-13",
       "start_on": "",
       "completed": false,
-      "status": "progress",
+      "status": "overdue",
       "section": "최적화",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214345716244890",
       "is_subtask": false,
@@ -1615,7 +1615,7 @@
       "completed": false,
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1205473956059645/task/1214286818659460",
+      "url": "https://app.asana.com/1/1199095400125716/task/1214286818659460",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -1628,7 +1628,7 @@
       "completed": false,
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1205473956059645/task/1214286818659461",
+      "url": "https://app.asana.com/1/1199095400125716/task/1214286818659461",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -1987,6 +1987,19 @@
     }
   ],
   "overdue": [
+    {
+      "gid": "1214345716244890",
+      "title": "아이폰 발열/최적화 대응 (/w 애플 컨설팅)",
+      "assignee": "황우형",
+      "due_on": "2026-05-13",
+      "start_on": "",
+      "completed": false,
+      "status": "overdue",
+      "section": "최적화",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214345716244890",
+      "is_subtask": false,
+      "parent_title": ""
+    },
     {
       "gid": "1213826373013136",
       "title": "[TW_0427] 피처 스위치 ON/OFF",
