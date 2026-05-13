@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-05-13 06:51 KST",
+  "synced_at": "2026-05-13 17:21 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 133,
-  "done": 61,
-  "done_rate": 46,
+  "done": 60,
+  "done_rate": 45,
   "overdue_count": 1,
   "tasks": [
     {
@@ -1373,19 +1373,6 @@
       "parent_title": ""
     },
     {
-      "gid": "1213977968621391",
-      "title": "↳ [TW] 앱 아이콘 UI 디자인",
-      "assignee": "",
-      "due_on": "",
-      "start_on": "",
-      "completed": true,
-      "status": "done",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1213977968621391",
-      "is_subtask": true,
-      "parent_title": "[TW] 앱 아이콘 적용 요청서"
-    },
-    {
       "gid": "1213977968621393",
       "title": "↳ [TW] 앱 아이콘 적용",
       "assignee": "박선유",
@@ -1473,6 +1460,19 @@
       "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1206838044009358/task/1214041904518345",
+      "is_subtask": true,
+      "parent_title": "[TW_0526] 새싹 모험가 숙련 유저 조건 - 던전 참조 로직 개선 요청"
+    },
+    {
+      "gid": "1214760112178930",
+      "title": "↳ [QA] 대만 새싹 모험가 데이터 작업",
+      "assignee": "현승은",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1214760112178930",
       "is_subtask": true,
       "parent_title": "[TW_0526] 새싹 모험가 숙련 유저 조건 - 던전 참조 로직 개선 요청"
     },
@@ -2011,7 +2011,7 @@
     "박선유": 1,
     "황천섭": 1,
     "김진표": 1,
-    "현승은": 17,
+    "현승은": 18,
     "양종규": 1,
     "유주원": 1,
     "신민지": 1,
