@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-05-14 17:20 KST",
+  "synced_at": "2026-05-15 01:25 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 135,
@@ -484,7 +484,7 @@
       "completed": false,
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1214795888794684",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1214795888794684",
       "is_subtask": true,
       "parent_title": "[TW_1.0] 환경설정 - 카카오톡/안심기기 피처 스위치 작업"
     },
@@ -1851,7 +1851,7 @@
       "completed": false,
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1214795888794684",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1214795888794684",
       "is_subtask": true,
       "parent_title": "[TW_1.0] 환경설정 - 카카오톡/안심기기 피처 스위치 작업"
     },
