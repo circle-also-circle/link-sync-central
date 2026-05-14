@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-05-14 07:42 KST",
+  "synced_at": "2026-05-14 17:20 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 133,
-  "done": 60,
-  "done_rate": 45,
+  "total": 135,
+  "done": 63,
+  "done_rate": 47,
   "overdue_count": 2,
   "tasks": [
     {
@@ -100,7 +100,7 @@
     },
     {
       "gid": "1214287009807254",
-      "title": "[일정] 대만 론칭 빌드 검수 제출 ",
+      "title": "[일정] 대만 론칭 빌드 검수 제출",
       "assignee": "원도환",
       "due_on": "2026-07-08",
       "start_on": "",
@@ -450,6 +450,45 @@
       "parent_title": "대만 런칭 영상 작업"
     },
     {
+      "gid": "1214795219474443",
+      "title": "[TW_1.0] 환경설정 - 카카오톡/안심기기 피처 스위치 작업",
+      "assignee": "신민지",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1214795219474443",
+      "is_subtask": false,
+      "parent_title": ""
+    },
+    {
+      "gid": "1214795888794677",
+      "title": "↳ 환경설정 - 카카오톡/안심기기 피처 스위치 작업",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214795888794677",
+      "is_subtask": true,
+      "parent_title": "[TW_1.0] 환경설정 - 카카오톡/안심기기 피처 스위치 작업"
+    },
+    {
+      "gid": "1214795888794684",
+      "title": "↳ [피니셔팀] 환경설정 - 카카오톡/안심기기 피처 스위치 작업",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/task/1214795888794684",
+      "is_subtask": true,
+      "parent_title": "[TW_1.0] 환경설정 - 카카오톡/안심기기 피처 스위치 작업"
+    },
+    {
       "gid": "1214149626235012",
       "title": "대만 빌드 API 사용 컨텐츠 대응",
       "assignee": "이지수",
@@ -712,11 +751,11 @@
     {
       "gid": "1214564495495315",
       "title": "↳ [TW] 퀵가이드 이미지 번역 요청",
-      "assignee": "",
+      "assignee": "오요한",
       "due_on": "",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951370334577/task/1214564495495315",
       "is_subtask": true,
@@ -1443,8 +1482,8 @@
       "assignee": "현승은",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214002616318943",
       "is_subtask": false,
@@ -1460,19 +1499,6 @@
       "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1206838044009358/task/1214041904518345",
-      "is_subtask": true,
-      "parent_title": "[TW_0526] 새싹 모험가 숙련 유저 조건 - 던전 참조 로직 개선 요청"
-    },
-    {
-      "gid": "1214760112178930",
-      "title": "↳ [QA] 대만 새싹 모험가 데이터 작업",
-      "assignee": "현승은",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "progress",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1214760112178930",
       "is_subtask": true,
       "parent_title": "[TW_0526] 새싹 모험가 숙련 유저 조건 - 던전 참조 로직 개선 요청"
     },
@@ -1612,10 +1638,10 @@
       "assignee": "윤대의",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1214286818659460",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1214286818659460",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -1625,10 +1651,10 @@
       "assignee": "윤대의",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1214286818659461",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1214286818659461",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -1804,6 +1830,32 @@
       "parent_title": "대만 런칭 영상 작업"
     },
     {
+      "gid": "1214795888794677",
+      "title": "↳ 환경설정 - 카카오톡/안심기기 피처 스위치 작업",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214795888794677",
+      "is_subtask": true,
+      "parent_title": "[TW_1.0] 환경설정 - 카카오톡/안심기기 피처 스위치 작업"
+    },
+    {
+      "gid": "1214795888794684",
+      "title": "↳ [피니셔팀] 환경설정 - 카카오톡/안심기기 피처 스위치 작업",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/task/1214795888794684",
+      "is_subtask": true,
+      "parent_title": "[TW_1.0] 환경설정 - 카카오톡/안심기기 피처 스위치 작업"
+    },
+    {
       "gid": "1214725702427102",
       "title": "↳ [로직1] 대만 빌드 API 사용 컨텐츠 대응 - 친구 추천, 길드 추천 ",
       "assignee": "",
@@ -1880,19 +1932,6 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1206860725502242/task/1214594318220317",
       "is_subtask": true,
       "parent_title": "[TW] 야시장 이벤트 아이콘 제작 요청서"
-    },
-    {
-      "gid": "1214564495495315",
-      "title": "↳ [TW] 퀵가이드 이미지 번역 요청",
-      "assignee": "",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1208951370334577/task/1214564495495315",
-      "is_subtask": true,
-      "parent_title": "[TW] 퀵가이드 이미지 번역 요청서"
     },
     {
       "gid": "1213917117417740",
@@ -2024,10 +2063,11 @@
     "박선유": 1,
     "황천섭": 1,
     "김진표": 1,
-    "현승은": 18,
+    "신민지": 2,
+    "현승은": 16,
     "양종규": 1,
     "유주원": 1,
-    "신민지": 1,
+    "오요한": 1,
     "장현우": 1,
     "최아영": 2,
     "박상열": 2,
@@ -2035,7 +2075,7 @@
     "권성태": 1,
     "강은주": 1,
     "김창균": 1,
-    "윤대의": 3
+    "윤대의": 1
   },
   "sections": [
     "주요 일정",
