@@ -1,9 +1,9 @@
 {
-  "synced_at": "2026-05-19 08:43 KST",
+  "synced_at": "2026-05-19 20:42 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 133,
-  "done": 68,
+  "total": 134,
+  "done": 69,
   "done_rate": 51,
   "overdue_count": 6,
   "tasks": [
@@ -348,7 +348,7 @@
     {
       "gid": "1214561851321449",
       "title": "↳ [TW] 사전 캐릭터 생성 이벤트 준비",
-      "assignee": "황천섭",
+      "assignee": "김한수",
       "due_on": "2026-05-26",
       "start_on": "",
       "completed": false,
@@ -463,13 +463,26 @@
       "parent_title": "대만 런칭 영상 작업"
     },
     {
+      "gid": "1214881146126156",
+      "title": "[TW] 이벤트 썸네일 이미지에서 한글 노출 수정 필요 건",
+      "assignee": "신민지",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208951370334577/task/1214881146126156",
+      "is_subtask": false,
+      "parent_title": ""
+    },
+    {
       "gid": "1214599016473472",
       "title": "[피처스위치] 프로필 내 피처스위치 미적용 항목 수정 ",
       "assignee": "박교현",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1206838044009358/task/1214599016473472",
       "is_subtask": false,
@@ -868,11 +881,11 @@
     {
       "gid": "1214594318220317",
       "title": "↳ [TW] 야시장 이벤트 아이콘 4종 제작",
-      "assignee": "",
+      "assignee": "이환욱",
       "due_on": "",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1206860725502242/task/1214594318220317",
       "is_subtask": true,
@@ -1154,7 +1167,7 @@
     {
       "gid": "1214060154920509",
       "title": "↳ 전설 패션 확정 승급 구현 - 로직1",
-      "assignee": "",
+      "assignee": "조한석",
       "due_on": "2026-05-18",
       "start_on": "",
       "completed": false,
@@ -1167,7 +1180,7 @@
     {
       "gid": "1214070274288616",
       "title": "↳ 전설 로브 분해 보상 지급 기능 - 로직1",
-      "assignee": "",
+      "assignee": "주동현",
       "due_on": "2026-05-18",
       "start_on": "",
       "completed": false,
@@ -1817,19 +1830,6 @@
       "parent_title": "[TW] 플레이힌트 글로벌 대응 작업 요청서"
     },
     {
-      "gid": "1214594318220317",
-      "title": "↳ [TW] 야시장 이벤트 아이콘 4종 제작",
-      "assignee": "",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1206860725502242/task/1214594318220317",
-      "is_subtask": true,
-      "parent_title": "[TW] 야시장 이벤트 아이콘 제작 요청서"
-    },
-    {
       "gid": "1213917117417740",
       "title": "↳ [레벨디자인팀][배경] 던바튼 야시장 컨셉 레벨 제작 요청",
       "assignee": "",
@@ -1854,32 +1854,6 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213742032011214",
       "is_subtask": false,
       "parent_title": ""
-    },
-    {
-      "gid": "1214060154920509",
-      "title": "↳ 전설 패션 확정 승급 구현 - 로직1",
-      "assignee": "",
-      "due_on": "2026-05-18",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1214060154920509",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
-    },
-    {
-      "gid": "1214070274288616",
-      "title": "↳ 전설 로브 분해 보상 지급 기능 - 로직1",
-      "assignee": "",
-      "due_on": "2026-05-18",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1214070274288616",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
     {
       "gid": "1214122868253231",
@@ -1951,7 +1925,7 @@
     {
       "gid": "1214060154920509",
       "title": "↳ 전설 패션 확정 승급 구현 - 로직1",
-      "assignee": "",
+      "assignee": "조한석",
       "due_on": "2026-05-18",
       "start_on": "",
       "completed": false,
@@ -1964,7 +1938,7 @@
     {
       "gid": "1214070274288616",
       "title": "↳ 전설 로브 분해 보상 지급 기능 - 로직1",
-      "assignee": "",
+      "assignee": "주동현",
       "due_on": "2026-05-18",
       "start_on": "",
       "completed": false,
@@ -1996,20 +1970,21 @@
     "임재훈": 3,
     "황우형": 1,
     "박선유": 1,
-    "황천섭": 1,
-    "박교현": 1,
+    "김한수": 1,
+    "신민지": 3,
     "현승은": 16,
-    "신민지": 2,
     "장현우": 1,
     "최아영": 1,
     "박상열": 2,
-    "조한석": 2,
+    "조한석": 3,
+    "이환욱": 1,
     "유주원": 1,
     "오요한": 1,
     "권성태": 1,
     "강은주": 1,
     "김창균": 1,
-    "윤대의": 1
+    "윤대의": 1,
+    "주동현": 1
   },
   "sections": [
     "주요 일정",
