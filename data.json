@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-05-19 20:42 KST",
+  "synced_at": "2026-05-20 03:26 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 134,
   "done": 69,
   "done_rate": 51,
-  "overdue_count": 6,
+  "overdue_count": 7,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -183,7 +183,7 @@
       "due_on": "2026-05-19",
       "start_on": "",
       "completed": false,
-      "status": "progress",
+      "status": "overdue",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214286622171258",
       "is_subtask": true,
@@ -698,7 +698,7 @@
     },
     {
       "gid": "1214795219474443",
-      "title": "[TW_1.0] 환경설정 - 카카오톡/안심기기 피처 스위치 작업",
+      "title": "[TW_1.0] 환경설정 - 카카오톡 피처 스위치 작업",
       "assignee": "신민지",
       "due_on": "2026-05-26",
       "start_on": "",
@@ -720,7 +720,7 @@
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214795888794677",
       "is_subtask": true,
-      "parent_title": "[TW_1.0] 환경설정 - 카카오톡/안심기기 피처 스위치 작업"
+      "parent_title": "[TW_1.0] 환경설정 - 카카오톡 피처 스위치 작업"
     },
     {
       "gid": "1214795888794684",
@@ -733,7 +733,7 @@
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1214795888794684",
       "is_subtask": true,
-      "parent_title": "[TW_1.0] 환경설정 - 카카오톡/안심기기 피처 스위치 작업"
+      "parent_title": "[TW_1.0] 환경설정 - 카카오톡 피처 스위치 작업"
     },
     {
       "gid": "1214149626235012",
@@ -1883,6 +1883,19 @@
     }
   ],
   "overdue": [
+    {
+      "gid": "1214286622171258",
+      "title": "↳ [로직] 구글 OOAP 연동 작업 ",
+      "assignee": "권혁인",
+      "due_on": "2026-05-19",
+      "start_on": "",
+      "completed": false,
+      "status": "overdue",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214286622171258",
+      "is_subtask": true,
+      "parent_title": "[v3.0_0625A][대만런칭] 구글 OOAP 연동 작업 요청"
+    },
     {
       "gid": "1213826373013136",
       "title": "[TW_0427] 피처 스위치 ON/OFF",
