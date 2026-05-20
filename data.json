@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-05-21 04:34 KST",
+  "synced_at": "2026-05-21 08:57 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 135,
-  "done": 69,
-  "done_rate": 51,
+  "done": 70,
+  "done_rate": 52,
   "overdue_count": 7,
   "tasks": [
     {
@@ -897,8 +897,8 @@
       "assignee": "이환욱",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1206860725502242/task/1214594318220317",
       "is_subtask": true,
@@ -2004,7 +2004,6 @@
     "최아영": 1,
     "박상열": 2,
     "조한석": 3,
-    "이환욱": 1,
     "유주원": 1,
     "오요한": 1,
     "권성태": 1,
