@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-05-21 08:57 KST",
+  "synced_at": "2026-05-21 20:55 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 135,
-  "done": 70,
-  "done_rate": 52,
+  "total": 139,
+  "done": 73,
+  "done_rate": 53,
   "overdue_count": 7,
   "tasks": [
     {
@@ -255,6 +255,19 @@
       "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
     },
     {
+      "gid": "1215000178834255",
+      "title": "↳ [TW_0526][v3.0_0625A] IAP OFFER CODE 연동 작업 디테일업",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215000178834255",
+      "is_subtask": true,
+      "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
+    },
+    {
       "gid": "1214145761152754",
       "title": "쿠폰 플러스",
       "assignee": "임재훈",
@@ -463,6 +476,19 @@
       "parent_title": "대만 런칭 영상 작업"
     },
     {
+      "gid": "1214796149224216",
+      "title": "DataPatchUI의 텍스트를 StringTable로 빼기",
+      "assignee": "유주원",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214796149224216",
+      "is_subtask": false,
+      "parent_title": ""
+    },
+    {
       "gid": "1214759674465852",
       "title": "[TW_1.0] 연인/친구 협동 미션 글로벌 대응 - 데이터 작업",
       "assignee": "신민지",
@@ -481,8 +507,8 @@
       "assignee": "이정현",
       "due_on": "2026-05-22",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951370334577/task/1214881146126156",
       "is_subtask": false,
@@ -637,8 +663,8 @@
       "assignee": "박상열",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1206838044009358/task/1213744753223453",
       "is_subtask": true,
@@ -1053,8 +1079,8 @@
       "assignee": "강은주",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1201825760551180/task/1213977803206518",
       "is_subtask": true,
@@ -1750,6 +1776,32 @@
       "parent_title": "[TW_0427] 대만 빌드 - 한국어 보이스 자막 적용"
     },
     {
+      "gid": "1214993761714745",
+      "title": "[TW0722] 대만 주단위 업데이트 데이터 작업 - 퀘스트 및 아르바이트 관련 작업",
+      "assignee": "임상훈",
+      "due_on": "2026-06-08",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "론칭 이후 업데이트 데이터 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208935508758522/task/1214993761714745",
+      "is_subtask": false,
+      "parent_title": ""
+    },
+    {
+      "gid": "1214993761714736",
+      "title": "[TW0722] 대만 주단위 업데이트 데이터 작업 - 콘텐츠 보상 및 NPC 상점",
+      "assignee": "황인진",
+      "due_on": "2026-06-08",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "론칭 이후 업데이트 데이터 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1202911821977204/task/1214993761714736",
+      "is_subtask": false,
+      "parent_title": ""
+    },
+    {
       "gid": "1214246612945102",
       "title": "NDR 셋업",
       "assignee": "원도환",
@@ -1776,6 +1828,19 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1214286622171270",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A][대만런칭] 구글 OOAP 연동 작업 요청"
+    },
+    {
+      "gid": "1215000178834255",
+      "title": "↳ [TW_0526][v3.0_0625A] IAP OFFER CODE 연동 작업 디테일업",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215000178834255",
+      "is_subtask": true,
+      "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
     },
     {
       "gid": "1214343698463900",
@@ -1997,20 +2062,20 @@
     "황우형": 1,
     "박선유": 1,
     "김한수": 1,
+    "유주원": 2,
     "신민지": 3,
-    "이정현": 1,
     "현승은": 16,
     "장현우": 1,
     "최아영": 1,
-    "박상열": 2,
     "조한석": 3,
-    "유주원": 1,
+    "박상열": 1,
     "오요한": 1,
     "권성태": 1,
-    "강은주": 1,
     "김창균": 1,
     "윤대의": 1,
-    "주동현": 1
+    "주동현": 1,
+    "임상훈": 1,
+    "황인진": 1
   },
   "sections": [
     "주요 일정",
@@ -2019,6 +2084,7 @@
     "론칭 스펙 관련 확인",
     "마케팅 관련",
     "글로벌 라전팀 담당 작업",
+    "론칭 이후 업데이트 데이터 작업",
     "기타 논의 및 일정"
   ]
 }
