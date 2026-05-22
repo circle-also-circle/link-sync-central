@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-05-22 07:54 KST",
+  "synced_at": "2026-05-22 19:34 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 139,
-  "done": 73,
-  "done_rate": 53,
+  "total": 143,
+  "done": 75,
+  "done_rate": 52,
   "overdue_count": 7,
   "tasks": [
     {
@@ -229,6 +229,19 @@
       "parent_title": "[v3.0_0625A][대만런칭] 구글 OOAP 연동 작업 요청"
     },
     {
+      "gid": "1215041315572068",
+      "title": "↳ [QA] 구글 OOAP 연동 작업",
+      "assignee": "이지수",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215041315572068",
+      "is_subtask": true,
+      "parent_title": "[v3.0_0625A][대만런칭] 구글 OOAP 연동 작업 요청"
+    },
+    {
       "gid": "1214046126850053",
       "title": "[TW_0526] IAP OFFER CODE 연동 작업 요청",
       "assignee": "이지수",
@@ -264,6 +277,19 @@
       "status": "todo",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215000178834255",
+      "is_subtask": true,
+      "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
+    },
+    {
+      "gid": "1215042042749803",
+      "title": "↳ [QA] IAP OFFER CODE 연동 작업 요청",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1215042042749803",
       "is_subtask": true,
       "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
     },
@@ -351,10 +377,10 @@
       "assignee": "이지수",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "론칭 스펙 관련 확인",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214345716244899",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1214345716244899",
       "is_subtask": false,
       "parent_title": ""
     },
@@ -368,6 +394,19 @@
       "status": "progress",
       "section": "론칭 스펙 관련 확인",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214561851321449",
+      "is_subtask": true,
+      "parent_title": "[TW] 사전 캐릭터 생성 이벤트 준비 "
+    },
+    {
+      "gid": "1215046331516536",
+      "title": "↳ [QA] 사전 캐릭터 생성 이벤트 준비",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "론칭 스펙 관련 확인",
+      "url": "https://app.asana.com/1/1199095400125716/task/1215046331516536",
       "is_subtask": true,
       "parent_title": "[TW] 사전 캐릭터 생성 이벤트 준비 "
     },
@@ -962,8 +1001,8 @@
       "assignee": "오요한",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951370334577/task/1214564495495315",
       "is_subtask": true,
@@ -1139,6 +1178,19 @@
       "parent_title": "[TW_0526] 연인 관계 의상 연출 기능 구현"
     },
     {
+      "gid": "1215042128456164",
+      "title": "↳ [QA] 연인 관계 의상 연출 기능 구현",
+      "assignee": "현승은",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215042128456164",
+      "is_subtask": true,
+      "parent_title": "[TW_0526] 연인 관계 의상 연출 기능 구현"
+    },
+    {
       "gid": "1213742032011214",
       "title": "[TW_0526] 넥슨 나우 글로벌 실측 확률 연동 작업",
       "assignee": "",
@@ -1271,13 +1323,13 @@
     {
       "gid": "1213758197423191",
       "title": "↳ 전설 패션/펫 합성, 승급 천장 테스트 - QA",
-      "assignee": "",
+      "assignee": "윤대의",
       "due_on": "",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1213758197423191",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1213758197423191",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -1790,9 +1842,9 @@
     },
     {
       "gid": "1214993761714736",
-      "title": "[TW0722] 대만 주단위 업데이트 데이터 작업 - 콘텐츠 보상 및 NPC 상점",
+      "title": "[TW0722] 대만 업데이트 데이터 작업 - 7/22 빌드에 투입될 보상 데이터 작업",
       "assignee": "황인진",
-      "due_on": "2026-06-08",
+      "due_on": "",
       "start_on": "",
       "completed": false,
       "status": "progress",
@@ -1841,6 +1893,32 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215000178834255",
       "is_subtask": true,
       "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
+    },
+    {
+      "gid": "1215042042749803",
+      "title": "↳ [QA] IAP OFFER CODE 연동 작업 요청",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1215042042749803",
+      "is_subtask": true,
+      "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
+    },
+    {
+      "gid": "1215046331516536",
+      "title": "↳ [QA] 사전 캐릭터 생성 이벤트 준비",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "론칭 스펙 관련 확인",
+      "url": "https://app.asana.com/1/1199095400125716/task/1215046331516536",
+      "is_subtask": true,
+      "parent_title": "[TW] 사전 캐릭터 생성 이벤트 준비 "
     },
     {
       "gid": "1214343698463900",
@@ -1943,19 +2021,6 @@
       "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/task/1214122868253231",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
-    },
-    {
-      "gid": "1213758197423191",
-      "title": "↳ 전설 패션/펫 합성, 승급 천장 테스트 - QA",
-      "assignee": "",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1213758197423191",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     }
@@ -2064,15 +2129,14 @@
     "김한수": 1,
     "유주원": 2,
     "신민지": 3,
-    "현승은": 16,
+    "현승은": 17,
     "장현우": 1,
     "최아영": 1,
     "조한석": 3,
     "박상열": 1,
-    "오요한": 1,
     "권성태": 1,
     "김창균": 1,
-    "윤대의": 1,
+    "윤대의": 2,
     "주동현": 1,
     "임상훈": 1,
     "황인진": 1
