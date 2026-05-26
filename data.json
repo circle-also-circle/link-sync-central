@@ -1,9 +1,9 @@
 {
-  "synced_at": "2026-05-26 15:38 KST",
+  "synced_at": "2026-05-26 22:48 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 143,
-  "done": 80,
+  "total": 144,
+  "done": 81,
   "done_rate": 56,
   "overdue_count": 7,
   "tasks": [
@@ -1014,8 +1014,8 @@
       "assignee": "현승은",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213905094128761",
       "is_subtask": false,
@@ -1044,6 +1044,19 @@
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210555393097092/task/1213917117417740",
+      "is_subtask": true,
+      "parent_title": "[TW] 던바튼 야시장 컨셉 레벨 제작 아트 요청"
+    },
+    {
+      "gid": "1215114757456107",
+      "title": "↳ [QA] 던바튼 야시장 컨셉 레벨 적용",
+      "assignee": "현승은",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215114757456107",
       "is_subtask": true,
       "parent_title": "[TW] 던바튼 야시장 컨셉 레벨 제작 아트 요청"
     },
