@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-05-26 11:39 KST",
+  "synced_at": "2026-05-26 15:38 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 143,
-  "done": 79,
-  "done_rate": 55,
+  "done": 80,
+  "done_rate": 56,
   "overdue_count": 7,
   "tasks": [
     {
@@ -1092,8 +1092,8 @@
       "assignee": "현승은",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213564322568711",
       "is_subtask": false,
@@ -2102,7 +2102,7 @@
     "박선유": 1,
     "유주원": 2,
     "신민지": 3,
-    "현승은": 17,
+    "현승은": 16,
     "최아영": 1,
     "조한석": 3,
     "박상열": 1,
