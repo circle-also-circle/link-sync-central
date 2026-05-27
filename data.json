@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-05-27 19:49 KST",
+  "synced_at": "2026-05-27 23:19 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 148,
-  "done": 83,
-  "done_rate": 56,
-  "overdue_count": 18,
+  "done": 84,
+  "done_rate": 57,
+  "overdue_count": 17,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -1313,8 +1313,8 @@
       "assignee": "주동현",
       "due_on": "2026-05-18",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1214070274288616",
       "is_subtask": true,
@@ -2287,19 +2287,6 @@
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
     {
-      "gid": "1214070274288616",
-      "title": "↳ 전설 로브 분해 보상 지급 기능 - 로직1",
-      "assignee": "주동현",
-      "due_on": "2026-05-18",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1214070274288616",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
-    },
-    {
       "gid": "1214122868253231",
       "title": "↳ 전설 패션/펫 천장 관련 아이콘 제작",
       "assignee": "",
@@ -2329,7 +2316,6 @@
     "권성태": 1,
     "김창균": 1,
     "윤대의": 2,
-    "주동현": 1,
     "이동헌": 1,
     "임상훈": 1,
     "황인진": 1
