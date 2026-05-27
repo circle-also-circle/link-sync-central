@@ -1,8 +1,8 @@
 {
-  "synced_at": "2026-05-27 15:55 KST",
+  "synced_at": "2026-05-27 19:49 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 147,
+  "total": 148,
   "done": 83,
   "done_rate": 56,
   "overdue_count": 18,
@@ -362,7 +362,7 @@
       "gid": "1214345527347152",
       "title": "[피니셔팀] 숫자 폰트 프록시꼬 폰트로 변경 적용",
       "assignee": "박선유",
-      "due_on": "",
+      "due_on": "2026-06-01",
       "start_on": "",
       "completed": false,
       "status": "progress",
@@ -1374,14 +1374,27 @@
     },
     {
       "gid": "1215155255204935",
-      "title": "↳ 전설 패션 확정 승급 FX 제작 요청",
+      "title": "↳ 전설 패션 확정 승급 FX 제작 요청 - 모션그래픽",
+      "assignee": "이동헌",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1201436090649243/task/1215155255204935",
+      "is_subtask": true,
+      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
+    },
+    {
+      "gid": "1215161214844580",
+      "title": "↳ 전설 패션 확정 승급 연출 조립 - 피니셔",
       "assignee": "",
       "due_on": "",
       "start_on": "",
       "completed": false,
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1215155255204935",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215161214844580",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -2051,15 +2064,15 @@
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
     {
-      "gid": "1215155255204935",
-      "title": "↳ 전설 패션 확정 승급 FX 제작 요청",
+      "gid": "1215161214844580",
+      "title": "↳ 전설 패션 확정 승급 연출 조립 - 피니셔",
       "assignee": "",
       "due_on": "",
       "start_on": "",
       "completed": false,
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1215155255204935",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215161214844580",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     }
@@ -2317,6 +2330,7 @@
     "김창균": 1,
     "윤대의": 2,
     "주동현": 1,
+    "이동헌": 1,
     "임상훈": 1,
     "황인진": 1
   },
