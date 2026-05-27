@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-05-27 23:19 KST",
+  "synced_at": "2026-05-28 02:51 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 148,
   "done": 84,
   "done_rate": 57,
-  "overdue_count": 17,
+  "overdue_count": 18,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -482,7 +482,7 @@
       "due_on": "2026-05-27",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "overdue",
       "section": "마케팅 관련",
       "url": "https://app.asana.com/1/1199095400125716/task/1214343698463905",
       "is_subtask": true,
@@ -1979,7 +1979,7 @@
       "due_on": "2026-05-27",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "overdue",
       "section": "마케팅 관련",
       "url": "https://app.asana.com/1/1199095400125716/task/1214343698463905",
       "is_subtask": true,
@@ -2142,6 +2142,19 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214067836467510",
       "is_subtask": false,
       "parent_title": ""
+    },
+    {
+      "gid": "1214343698463905",
+      "title": "↳ 대만 티저 영상 ",
+      "assignee": "",
+      "due_on": "2026-05-27",
+      "start_on": "",
+      "completed": false,
+      "status": "overdue",
+      "section": "마케팅 관련",
+      "url": "https://app.asana.com/1/1199095400125716/task/1214343698463905",
+      "is_subtask": true,
+      "parent_title": "대만 런칭 영상 작업"
     },
     {
       "gid": "1214668785451632",
