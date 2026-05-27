@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-05-27 08:01 KST",
+  "synced_at": "2026-05-27 11:32 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 144,
-  "done": 81,
-  "done_rate": 56,
-  "overdue_count": 20,
+  "done": 82,
+  "done_rate": 57,
+  "overdue_count": 19,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -221,8 +221,8 @@
       "assignee": "윤성문",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1214286622171270",
       "is_subtask": true,
@@ -2040,19 +2040,6 @@
       "parent_title": "[v3.0_0625A][대만런칭] 구글 OOAP 연동 작업 요청"
     },
     {
-      "gid": "1214286622171270",
-      "title": "↳ [피니셔팀] 구글 OOAP 연동 작업",
-      "assignee": "윤성문",
-      "due_on": "2026-05-26",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "서비스 연동 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1214286622171270",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A][대만런칭] 구글 OOAP 연동 작업 요청"
-    },
-    {
       "gid": "1214046126850053",
       "title": "[TW_0526] IAP OFFER CODE 연동 작업 요청",
       "assignee": "이지수",
@@ -2278,7 +2265,6 @@
     "원도환": 8,
     "이지수": 4,
     "권혁인": 2,
-    "윤성문": 1,
     "임재훈": 3,
     "황우형": 1,
     "박선유": 1,
