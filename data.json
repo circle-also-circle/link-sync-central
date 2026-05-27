@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-05-27 11:32 KST",
+  "synced_at": "2026-05-27 15:55 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 144,
-  "done": 82,
-  "done_rate": 57,
-  "overdue_count": 19,
+  "total": 147,
+  "done": 83,
+  "done_rate": 56,
+  "overdue_count": 18,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -827,6 +827,32 @@
       "parent_title": ""
     },
     {
+      "gid": "1215154286409851",
+      "title": "↳ 추천 API에 어비스 태그 요청",
+      "assignee": "이지수",
+      "due_on": "2026-07-29",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/task/1215154286409851",
+      "is_subtask": true,
+      "parent_title": "대만 빌드 API 사용 컨텐츠 대응"
+    },
+    {
+      "gid": "1215154286409852",
+      "title": "↳ 추천 API에 레이드 태그 요청",
+      "assignee": "이지수",
+      "due_on": "2026-08-05",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/task/1215154286409852",
+      "is_subtask": true,
+      "parent_title": "대만 빌드 API 사용 컨텐츠 대응"
+    },
+    {
       "gid": "1214597754824008",
       "title": "[TW] 플레이힌트 글로벌 대응 작업 요청서",
       "assignee": "현승은",
@@ -1066,8 +1092,8 @@
       "assignee": "현승은",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214106534228870",
       "is_subtask": false,
@@ -1343,6 +1369,19 @@
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1213758197423191",
+      "is_subtask": true,
+      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
+    },
+    {
+      "gid": "1215155255204935",
+      "title": "↳ 전설 패션 확정 승급 FX 제작 요청",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1215155255204935",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -2010,6 +2049,19 @@
       "url": "https://app.asana.com/1/1199095400125716/task/1214122868253231",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
+    },
+    {
+      "gid": "1215155255204935",
+      "title": "↳ 전설 패션 확정 승급 FX 제작 요청",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1215155255204935",
+      "is_subtask": true,
+      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     }
   ],
   "overdue": [
@@ -2127,19 +2179,6 @@
       "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214149626235012",
-      "is_subtask": false,
-      "parent_title": ""
-    },
-    {
-      "gid": "1214106534228870",
-      "title": "[TW_0526] 촬영 모드 워터마크 변경 작업 요청서",
-      "assignee": "현승은",
-      "due_on": "2026-05-26",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214106534228870",
       "is_subtask": false,
       "parent_title": ""
     },
@@ -2263,14 +2302,14 @@
   ],
   "owner_counts": {
     "원도환": 8,
-    "이지수": 4,
+    "이지수": 6,
     "권혁인": 2,
     "임재훈": 3,
     "황우형": 1,
     "박선유": 1,
     "유주원": 2,
     "신민지": 3,
-    "현승은": 16,
+    "현승은": 15,
     "최아영": 1,
     "조한석": 3,
     "박상열": 1,
