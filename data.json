@@ -1,9 +1,9 @@
 {
-  "synced_at": "2026-05-28 15:43 KST",
+  "synced_at": "2026-05-28 19:45 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 149,
-  "done": 86,
+  "done": 87,
   "done_rate": 58,
   "overdue_count": 16,
   "tasks": [
@@ -1378,8 +1378,8 @@
       "assignee": "이동헌",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1201436090649243/task/1215155255204935",
       "is_subtask": true,
@@ -2328,7 +2328,6 @@
     "현승은": 14,
     "김창균": 1,
     "윤대의": 2,
-    "이동헌": 1,
     "임상훈": 1,
     "황인진": 1
   },
