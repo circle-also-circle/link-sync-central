@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-05-28 11:07 KST",
+  "synced_at": "2026-05-28 15:43 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 148,
-  "done": 84,
-  "done_rate": 57,
-  "overdue_count": 18,
+  "total": 149,
+  "done": 86,
+  "done_rate": 58,
+  "overdue_count": 16,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -572,8 +572,8 @@
       "assignee": "현승은",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1214668785451632",
       "is_subtask": false,
@@ -1105,8 +1105,8 @@
       "assignee": "권성태",
       "due_on": "2026-05-18",
       "start_on": "2026-05-01",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210750026955082/task/1214147926241586",
       "is_subtask": true,
@@ -1395,6 +1395,19 @@
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215161214844580",
+      "is_subtask": true,
+      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
+    },
+    {
+      "gid": "1215153249817948",
+      "title": "↳ [로직 미배정] 전설 패션/펫 천장 재화 소급 제공",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1215153249817948",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -2075,6 +2088,19 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215161214844580",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
+    },
+    {
+      "gid": "1215153249817948",
+      "title": "↳ [로직 미배정] 전설 패션/펫 천장 재화 소급 제공",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1215153249817948",
+      "is_subtask": true,
+      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     }
   ],
   "overdue": [
@@ -2157,19 +2183,6 @@
       "parent_title": "대만 런칭 영상 작업"
     },
     {
-      "gid": "1214668785451632",
-      "title": "[TW] 12세 이용가 경고 문구 변경 요청서",
-      "assignee": "현승은",
-      "due_on": "2026-05-26",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1214668785451632",
-      "is_subtask": false,
-      "parent_title": ""
-    },
-    {
       "gid": "1213826373013136",
       "title": "[TW_0427] 피처 스위치 ON/OFF",
       "assignee": "신민지",
@@ -2207,19 +2220,6 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214149626235012",
       "is_subtask": false,
       "parent_title": ""
-    },
-    {
-      "gid": "1214147926241586",
-      "title": "↳ [TW] 촬영 모드 워터마크 변경 작업 요청",
-      "assignee": "권성태",
-      "due_on": "2026-05-18",
-      "start_on": "2026-05-01",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1210750026955082/task/1214147926241586",
-      "is_subtask": true,
-      "parent_title": "[TW_0526] 촬영 모드 워터마크 변경 작업 요청서"
     },
     {
       "gid": "1213818705690722",
@@ -2322,11 +2322,10 @@
     "박선유": 1,
     "유주원": 2,
     "신민지": 3,
-    "현승은": 15,
     "최아영": 1,
     "조한석": 3,
     "박상열": 1,
-    "권성태": 1,
+    "현승은": 14,
     "김창균": 1,
     "윤대의": 2,
     "이동헌": 1,
