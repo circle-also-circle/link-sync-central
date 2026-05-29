@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-05-29 09:02 KST",
+  "synced_at": "2026-05-29 14:05 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 149,
-  "done": 87,
-  "done_rate": 58,
-  "overdue_count": 16,
+  "done": 88,
+  "done_rate": 59,
+  "overdue_count": 15,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -169,8 +169,8 @@
       "assignee": "이지수",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214177556222779",
       "is_subtask": false,
@@ -2105,19 +2105,6 @@
   ],
   "overdue": [
     {
-      "gid": "1214177556222779",
-      "title": "[v3.0_0625A][대만런칭] 구글 OOAP 연동 작업 요청",
-      "assignee": "이지수",
-      "due_on": "2026-05-26",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "서비스 연동 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214177556222779",
-      "is_subtask": false,
-      "parent_title": ""
-    },
-    {
       "gid": "1214286622171258",
       "title": "↳ [로직] 구글 OOAP 연동 작업 ",
       "assignee": "권혁인",
@@ -2315,8 +2302,8 @@
   ],
   "owner_counts": {
     "원도환": 8,
-    "이지수": 6,
     "권혁인": 2,
+    "이지수": 5,
     "임재훈": 3,
     "황우형": 1,
     "박선유": 1,
