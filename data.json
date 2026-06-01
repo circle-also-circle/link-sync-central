@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-01 08:57 KST",
+  "synced_at": "2026-06-01 12:42 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 149,
-  "done": 88,
-  "done_rate": 59,
-  "overdue_count": 15,
+  "total": 150,
+  "done": 91,
+  "done_rate": 61,
+  "overdue_count": 13,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -182,8 +182,8 @@
       "assignee": "권혁인",
       "due_on": "2026-05-19",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214286622171258",
       "is_subtask": true,
@@ -234,8 +234,8 @@
       "assignee": "이지수",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215041315572068",
       "is_subtask": true,
@@ -513,6 +513,19 @@
       "url": "https://app.asana.com/1/1199095400125716/task/1214343698463907",
       "is_subtask": true,
       "parent_title": "대만 런칭 영상 작업"
+    },
+    {
+      "gid": "1214376485650191",
+      "title": "[TW] 사이드 게임 텍스트 추출 작업",
+      "assignee": "유주원",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214376485650191",
+      "is_subtask": false,
+      "parent_title": ""
     },
     {
       "gid": "1214796149224216",
@@ -1326,10 +1339,10 @@
       "assignee": "",
       "due_on": "2026-05-18",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1214122868253231",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1214122868253231",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -2064,19 +2077,6 @@
       "parent_title": ""
     },
     {
-      "gid": "1214122868253231",
-      "title": "↳ 전설 패션/펫 천장 관련 아이콘 제작",
-      "assignee": "",
-      "due_on": "2026-05-18",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1214122868253231",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
-    },
-    {
       "gid": "1215161214844580",
       "title": "↳ 전설 패션 확정 승급 연출 조립 - 피니셔",
       "assignee": "",
@@ -2104,19 +2104,6 @@
     }
   ],
   "overdue": [
-    {
-      "gid": "1214286622171258",
-      "title": "↳ [로직] 구글 OOAP 연동 작업 ",
-      "assignee": "권혁인",
-      "due_on": "2026-05-19",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "서비스 연동 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214286622171258",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A][대만런칭] 구글 OOAP 연동 작업 요청"
-    },
     {
       "gid": "1214046126850053",
       "title": "[TW_0526] IAP OFFER CODE 연동 작업 요청",
@@ -2285,29 +2272,16 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1214060154920509",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
-    },
-    {
-      "gid": "1214122868253231",
-      "title": "↳ 전설 패션/펫 천장 관련 아이콘 제작",
-      "assignee": "",
-      "due_on": "2026-05-18",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1214122868253231",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     }
   ],
   "owner_counts": {
     "원도환": 8,
-    "권혁인": 2,
-    "이지수": 5,
+    "이지수": 4,
+    "권혁인": 1,
     "임재훈": 3,
     "황우형": 1,
     "박선유": 1,
-    "유주원": 2,
+    "유주원": 3,
     "신민지": 3,
     "최아영": 1,
     "조한석": 3,
