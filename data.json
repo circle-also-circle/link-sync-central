@@ -1,9 +1,9 @@
 {
-  "synced_at": "2026-06-01 12:42 KST",
+  "synced_at": "2026-06-01 18:12 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 150,
-  "done": 91,
+  "total": 153,
+  "done": 93,
   "done_rate": 61,
   "overdue_count": 13,
   "tasks": [
@@ -283,13 +283,13 @@
     {
       "gid": "1215042042749803",
       "title": "↳ [QA] IAP OFFER CODE 연동 작업 요청",
-      "assignee": "",
+      "assignee": "이지수",
       "due_on": "",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "progress",
       "section": "서비스 연동 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1215042042749803",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215042042749803",
       "is_subtask": true,
       "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
     },
@@ -767,8 +767,8 @@
       "assignee": "현승은",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1213564322568703",
       "is_subtask": false,
@@ -835,7 +835,7 @@
       "completed": false,
       "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214149626235012",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214149626235012",
       "is_subtask": false,
       "parent_title": ""
     },
@@ -848,7 +848,7 @@
       "completed": false,
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1215154286409851",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1215154286409851",
       "is_subtask": true,
       "parent_title": "대만 빌드 API 사용 컨텐츠 대응"
     },
@@ -861,7 +861,7 @@
       "completed": false,
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1215154286409852",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1215154286409852",
       "is_subtask": true,
       "parent_title": "대만 빌드 API 사용 컨텐츠 대응"
     },
@@ -888,6 +888,32 @@
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1201436090649243/task/1214677501500760",
+      "is_subtask": true,
+      "parent_title": "[TW] 플레이힌트 글로벌 대응 작업 요청서"
+    },
+    {
+      "gid": "1215271812151419",
+      "title": "↳ [대만] 플레이힌트 글로벌 대응 번역",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1215271812151419",
+      "is_subtask": true,
+      "parent_title": "[TW] 플레이힌트 글로벌 대응 작업 요청서"
+    },
+    {
+      "gid": "1215271812151397",
+      "title": "↳ [QA] 플레이힌트 글로벌 대응 작업",
+      "assignee": "현승은",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215271812151397",
       "is_subtask": true,
       "parent_title": "[TW] 플레이힌트 글로벌 대응 작업 요청서"
     },
@@ -1027,8 +1053,8 @@
       "assignee": "현승은",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214564269542002",
       "is_subtask": false,
@@ -1044,6 +1070,19 @@
       "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951370334577/task/1214564495495315",
+      "is_subtask": true,
+      "parent_title": "[TW] 퀵가이드 이미지 번역 요청서"
+    },
+    {
+      "gid": "1215271877153538",
+      "title": "↳ [QA] 퀵가이드 이미지 번역 요청",
+      "assignee": "현승은",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215271877153538",
       "is_subtask": true,
       "parent_title": "[TW] 퀵가이드 이미지 번역 요청서"
     },
@@ -1413,14 +1452,14 @@
     },
     {
       "gid": "1215153249817948",
-      "title": "↳ [로직 미배정] 전설 패션/펫 천장 재화 소급 제공",
+      "title": "↳ 전설 패션/펫 천장 재화 소급 제공 관련 데이터 요청 - NK실",
       "assignee": "",
       "due_on": "",
       "start_on": "",
       "completed": false,
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1215153249817948",
+      "url": "https://app.asana.com/1/1199095400125716/task/1215153249817948",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -1973,19 +2012,6 @@
       "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
     },
     {
-      "gid": "1215042042749803",
-      "title": "↳ [QA] IAP OFFER CODE 연동 작업 요청",
-      "assignee": "",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "서비스 연동 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1215042042749803",
-      "is_subtask": true,
-      "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
-    },
-    {
       "gid": "1214343698463900",
       "title": "대만 런칭 영상 작업",
       "assignee": "",
@@ -2051,6 +2077,19 @@
       "parent_title": "[TW] 플레이힌트 글로벌 대응 작업 요청서"
     },
     {
+      "gid": "1215271812151419",
+      "title": "↳ [대만] 플레이힌트 글로벌 대응 번역",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1215271812151419",
+      "is_subtask": true,
+      "parent_title": "[TW] 플레이힌트 글로벌 대응 작업 요청서"
+    },
+    {
       "gid": "1213917117417740",
       "title": "↳ [레벨디자인팀][배경] 던바튼 야시장 컨셉 레벨 제작 요청",
       "assignee": "",
@@ -2091,14 +2130,14 @@
     },
     {
       "gid": "1215153249817948",
-      "title": "↳ [로직 미배정] 전설 패션/펫 천장 재화 소급 제공",
+      "title": "↳ 전설 패션/펫 천장 재화 소급 제공 관련 데이터 요청 - NK실",
       "assignee": "",
       "due_on": "",
       "start_on": "",
       "completed": false,
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213400142088135/task/1215153249817948",
+      "url": "https://app.asana.com/1/1199095400125716/task/1215153249817948",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     }
@@ -2191,7 +2230,7 @@
       "completed": false,
       "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214149626235012",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214149626235012",
       "is_subtask": false,
       "parent_title": ""
     },
@@ -2276,7 +2315,7 @@
   ],
   "owner_counts": {
     "원도환": 8,
-    "이지수": 4,
+    "이지수": 5,
     "권혁인": 1,
     "임재훈": 3,
     "황우형": 1,
