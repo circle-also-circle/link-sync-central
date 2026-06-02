@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-02 09:08 KST",
+  "synced_at": "2026-06-02 14:23 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
-  "done": 102,
-  "done_rate": 67,
-  "overdue_count": 10,
+  "done": 103,
+  "done_rate": 68,
+  "overdue_count": 9,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -351,10 +351,10 @@
       "assignee": "박선유",
       "due_on": "2026-06-01",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "론칭 스펙 관련 확인",
-      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1214345527347152",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208951370334577/task/1214345527347152",
       "is_subtask": false,
       "parent_title": ""
     },
@@ -2105,19 +2105,6 @@
       "parent_title": ""
     },
     {
-      "gid": "1214345527347152",
-      "title": "[피니셔팀] 숫자 폰트 프록시꼬 폰트로 변경 적용",
-      "assignee": "박선유",
-      "due_on": "2026-06-01",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "론칭 스펙 관련 확인",
-      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1214345527347152",
-      "is_subtask": false,
-      "parent_title": ""
-    },
-    {
       "gid": "1213826373013136",
       "title": "[TW_0427] 피처 스위치 ON/OFF",
       "assignee": "신민지",
@@ -2213,7 +2200,6 @@
     "원도환": 7,
     "권혁인": 1,
     "임재훈": 1,
-    "박선유": 1,
     "신민지": 2,
     "최아영": 1,
     "조한석": 3,
