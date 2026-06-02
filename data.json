@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-06-02 14:23 KST",
+  "synced_at": "2026-06-02 19:04 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
@@ -1115,11 +1115,11 @@
     {
       "gid": "1215161214844580",
       "title": "↳ 전설 패션 확정 승급 연출 조립 - 피니셔",
-      "assignee": "",
+      "assignee": "윤성문",
       "due_on": "",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215161214844580",
       "is_subtask": true,
@@ -2038,19 +2038,6 @@
       "parent_title": "대만 런칭 영상 작업"
     },
     {
-      "gid": "1215161214844580",
-      "title": "↳ 전설 패션 확정 승급 연출 조립 - 피니셔",
-      "assignee": "",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215161214844580",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
-    },
-    {
       "gid": "1215153249817948",
       "title": "↳ 전설 패션/펫 천장 재화 소급 제공 관련 데이터 요청 - NK실",
       "assignee": "",
@@ -2211,6 +2198,7 @@
     "이석주": 1,
     "황우형": 1,
     "윤대의": 2,
+    "윤성문": 1,
     "임상훈": 1,
     "황인진": 1
   },
