@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-04 08:26 KST",
+  "synced_at": "2026-06-04 11:44 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
-  "done": 103,
+  "done": 104,
   "done_rate": 68,
-  "overdue_count": 9,
+  "overdue_count": 8,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -299,8 +299,8 @@
       "assignee": "임재훈",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214067836467510",
       "is_subtask": false,
@@ -2079,19 +2079,6 @@
       "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
     },
     {
-      "gid": "1214067836467510",
-      "title": "[TW_0526] 대만 PC 빌링 연동 작업",
-      "assignee": "임재훈",
-      "due_on": "2026-05-26",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "서비스 연동 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214067836467510",
-      "is_subtask": false,
-      "parent_title": ""
-    },
-    {
       "gid": "1213826373013136",
       "title": "[TW_0427] 피처 스위치 ON/OFF",
       "assignee": "신민지",
@@ -2186,7 +2173,6 @@
   "owner_counts": {
     "원도환": 7,
     "권혁인": 1,
-    "임재훈": 1,
     "신민지": 2,
     "최아영": 1,
     "조한석": 3,
