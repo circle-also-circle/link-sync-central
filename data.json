@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-06-04 11:44 KST",
+  "synced_at": "2026-06-04 16:15 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 152,
-  "done": 104,
-  "done_rate": 68,
+  "total": 153,
+  "done": 105,
+  "done_rate": 69,
   "overdue_count": 8,
   "tasks": [
     {
@@ -1088,7 +1088,7 @@
     },
     {
       "gid": "1213758197423191",
-      "title": "↳ 전설 패션/펫 합성, 승급 천장 테스트 - QA",
+      "title": "↳ 전설 패션/펫 합성, 승급 천장 테스트(대만) - QA",
       "assignee": "윤대의",
       "due_on": "",
       "start_on": "",
@@ -1118,8 +1118,8 @@
       "assignee": "윤성문",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215161214844580",
       "is_subtask": true,
@@ -1135,6 +1135,19 @@
       "status": "todo",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/task/1215153249817948",
+      "is_subtask": true,
+      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
+    },
+    {
+      "gid": "1215402136323585",
+      "title": "↳ 전설 패션/펫 합성, 승급 천장 테스트(국내) - QA",
+      "assignee": "윤대의",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "progress",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215402136323585",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -2183,8 +2196,7 @@
     "유주원": 2,
     "이석주": 1,
     "황우형": 1,
-    "윤대의": 2,
-    "윤성문": 1,
+    "윤대의": 3,
     "임상훈": 1,
     "황인진": 1
   },
