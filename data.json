@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-05 22:48 KST",
+  "synced_at": "2026-06-06 01:25 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 153,
-  "done": 107,
-  "done_rate": 70,
-  "overdue_count": 8,
+  "done": 109,
+  "done_rate": 71,
+  "overdue_count": 7,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -66,7 +66,7 @@
       "due_on": "2026-06-05",
       "start_on": "",
       "completed": false,
-      "status": "progress",
+      "status": "overdue",
       "section": "주요 일정",
       "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214896940942996",
       "is_subtask": false,
@@ -1014,8 +1014,8 @@
       "assignee": "조한석",
       "due_on": "2026-05-18",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1213758197423192",
       "is_subtask": true,
@@ -1027,8 +1027,8 @@
       "assignee": "조한석",
       "due_on": "2026-05-18",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1214060154920509",
       "is_subtask": true,
@@ -2079,6 +2079,19 @@
   ],
   "overdue": [
     {
+      "gid": "1214896940942996",
+      "title": "[일정] 사전 등록 검수 빌드 제작",
+      "assignee": "원도환",
+      "due_on": "2026-06-05",
+      "start_on": "",
+      "completed": false,
+      "status": "overdue",
+      "section": "주요 일정",
+      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214896940942996",
+      "is_subtask": false,
+      "parent_title": ""
+    },
+    {
       "gid": "1214210652658296",
       "title": "↳ [TW_0526][v3.0_0625A] IAP OFFER CODE 연동 작업 ",
       "assignee": "권혁인",
@@ -2155,32 +2168,6 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1212511675694495",
       "is_subtask": false,
       "parent_title": ""
-    },
-    {
-      "gid": "1213758197423192",
-      "title": "↳ 전설 패션/펫 합성. 승급 구현 - 로직1",
-      "assignee": "조한석",
-      "due_on": "2026-05-18",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1213758197423192",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
-    },
-    {
-      "gid": "1214060154920509",
-      "title": "↳ 전설 패션 확정 승급 구현 - 로직1",
-      "assignee": "조한석",
-      "due_on": "2026-05-18",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1214060154920509",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     }
   ],
   "owner_counts": {
@@ -2195,7 +2182,6 @@
     "이석주": 1,
     "황우형": 1,
     "윤대의": 3,
-    "조한석": 2,
     "임상훈": 1,
     "황인진": 1
   },
