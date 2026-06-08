@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-06-08 08:59 KST",
+  "synced_at": "2026-06-08 13:10 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 153,
-  "done": 109,
-  "done_rate": 71,
+  "total": 152,
+  "done": 110,
+  "done_rate": 72,
   "overdue_count": 7,
   "tasks": [
     {
@@ -647,7 +647,7 @@
     {
       "gid": "1214000534796314",
       "title": "↳ [피처 스위치] 미스틱 던전 ON/OFF",
-      "assignee": "박상열",
+      "assignee": "신민지",
       "due_on": "",
       "start_on": "",
       "completed": false,
@@ -862,19 +862,6 @@
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1212261875489435/task/1214671079838169",
-      "is_subtask": true,
-      "parent_title": "[TW] 야시장 이벤트 배너 제작 요청서"
-    },
-    {
-      "gid": "1214671079838170",
-      "title": "↳ 야시장 NPC 인기 투표 이벤트 ",
-      "assignee": "현승은",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "progress",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1199521714452397/task/1214671079838170",
       "is_subtask": true,
       "parent_title": "[TW] 야시장 이벤트 배너 제작 요청서"
     },
@@ -1144,8 +1131,8 @@
       "assignee": "윤대의",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215402136323585",
       "is_subtask": true,
@@ -2173,15 +2160,14 @@
   "owner_counts": {
     "원도환": 7,
     "권혁인": 1,
-    "신민지": 2,
-    "박상열": 1,
+    "신민지": 3,
     "이지수": 3,
-    "현승은": 14,
+    "현승은": 13,
     "김창균": 1,
     "유주원": 2,
     "이석주": 1,
     "황우형": 1,
-    "윤대의": 3,
+    "윤대의": 2,
     "임상훈": 1,
     "황인진": 1
   },
