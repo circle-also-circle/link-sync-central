@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-08 22:58 KST",
+  "synced_at": "2026-06-09 02:22 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
   "done": 111,
   "done_rate": 73,
-  "overdue_count": 6,
+  "overdue_count": 7,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -1951,7 +1951,7 @@
       "due_on": "2026-06-08",
       "start_on": "",
       "completed": false,
-      "status": "progress",
+      "status": "overdue",
       "section": "론칭 이후 업데이트 데이터 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208935508758522/task/1214993761714745",
       "is_subtask": false,
@@ -2140,6 +2140,19 @@
       "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1212511675694495",
+      "is_subtask": false,
+      "parent_title": ""
+    },
+    {
+      "gid": "1214993761714745",
+      "title": "[TW0722] 대만 주단위 업데이트 데이터 작업 - 퀘스트 및 아르바이트 관련 작업",
+      "assignee": "임상훈",
+      "due_on": "2026-06-08",
+      "start_on": "",
+      "completed": false,
+      "status": "overdue",
+      "section": "론칭 이후 업데이트 데이터 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1208935508758522/task/1214993761714745",
       "is_subtask": false,
       "parent_title": ""
     }
