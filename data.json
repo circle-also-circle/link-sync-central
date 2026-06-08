@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-08 13:10 KST",
+  "synced_at": "2026-06-08 18:17 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
-  "done": 110,
-  "done_rate": 72,
-  "overdue_count": 7,
+  "done": 111,
+  "done_rate": 73,
+  "overdue_count": 6,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -65,8 +65,8 @@
       "assignee": "원도환",
       "due_on": "2026-06-05",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "주요 일정",
       "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214896940942996",
       "is_subtask": false,
@@ -647,7 +647,7 @@
     {
       "gid": "1214000534796314",
       "title": "↳ [피처 스위치] 미스틱 던전 ON/OFF",
-      "assignee": "신민지",
+      "assignee": "현승은",
       "due_on": "",
       "start_on": "",
       "completed": false,
@@ -2066,19 +2066,6 @@
   ],
   "overdue": [
     {
-      "gid": "1214896940942996",
-      "title": "[일정] 사전 등록 검수 빌드 제작",
-      "assignee": "원도환",
-      "due_on": "2026-06-05",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "주요 일정",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214896940942996",
-      "is_subtask": false,
-      "parent_title": ""
-    },
-    {
       "gid": "1214210652658296",
       "title": "↳ [TW_0526][v3.0_0625A] IAP OFFER CODE 연동 작업 ",
       "assignee": "권혁인",
@@ -2158,11 +2145,11 @@
     }
   ],
   "owner_counts": {
-    "원도환": 7,
+    "원도환": 6,
     "권혁인": 1,
-    "신민지": 3,
+    "신민지": 2,
+    "현승은": 14,
     "이지수": 3,
-    "현승은": 13,
     "김창균": 1,
     "유주원": 2,
     "이석주": 1,
