@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-06-09 15:40 KST",
+  "synced_at": "2026-06-09 19:28 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
-  "done": 111,
-  "done_rate": 73,
+  "done": 112,
+  "done_rate": 74,
   "overdue_count": 7,
   "tasks": [
     {
@@ -78,8 +78,8 @@
       "assignee": "원도환",
       "due_on": "2026-06-09",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "주요 일정",
       "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214287009807256",
       "is_subtask": false,
@@ -2158,7 +2158,7 @@
     }
   ],
   "owner_counts": {
-    "원도환": 6,
+    "원도환": 5,
     "권혁인": 1,
     "신민지": 2,
     "현승은": 14,
