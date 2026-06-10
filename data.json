@@ -1,9 +1,9 @@
 {
-  "synced_at": "2026-06-10 15:58 KST",
+  "synced_at": "2026-06-10 19:56 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
-  "done": 112,
+  "done": 113,
   "done_rate": 74,
   "overdue_count": 7,
   "tasks": [
@@ -1079,8 +1079,8 @@
       "assignee": "윤대의",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1213758197423191",
       "is_subtask": true,
@@ -2167,7 +2167,7 @@
     "유주원": 2,
     "이석주": 1,
     "황우형": 1,
-    "윤대의": 2,
+    "윤대의": 1,
     "임상훈": 1,
     "황인진": 1
   },
