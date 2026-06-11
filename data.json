@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-06-11 09:08 KST",
+  "synced_at": "2026-06-11 14:21 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
@@ -608,7 +608,7 @@
     {
       "gid": "1213744753223453",
       "title": "↳ [피처 스위치] 레이드: NPC ON/OFF",
-      "assignee": "박상열",
+      "assignee": "",
       "due_on": "",
       "start_on": "",
       "completed": true,
