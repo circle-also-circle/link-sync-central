@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-12 23:34 KST",
+  "synced_at": "2026-06-13 02:31 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
   "done": 113,
   "done_rate": 74,
-  "overdue_count": 7,
+  "overdue_count": 8,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -703,7 +703,7 @@
       "due_on": "2026-06-12",
       "start_on": "",
       "completed": false,
-      "status": "progress",
+      "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214146245825600",
       "is_subtask": false,
@@ -2101,6 +2101,19 @@
       "status": "overdue",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1214149626235012",
+      "is_subtask": false,
+      "parent_title": ""
+    },
+    {
+      "gid": "1214146245825600",
+      "title": "[TW] 야시장 이벤트 아이콘 제작 요청서",
+      "assignee": "현승은",
+      "due_on": "2026-06-12",
+      "start_on": "",
+      "completed": false,
+      "status": "overdue",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1214146245825600",
       "is_subtask": false,
       "parent_title": ""
     },
