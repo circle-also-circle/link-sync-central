@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-06-15 09:01 KST",
+  "synced_at": "2026-06-15 15:14 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
-  "done": 113,
-  "done_rate": 74,
+  "done": 114,
+  "done_rate": 75,
   "overdue_count": 8,
   "tasks": [
     {
@@ -910,10 +910,10 @@
       "assignee": "이석주",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "progress",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1214958998335374/task/1214677501500760",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1214677501500760",
       "is_subtask": true,
       "parent_title": "[TW] 플레이힌트 글로벌 대응 작업 요청서"
     },
@@ -2178,7 +2178,6 @@
     "이지수": 3,
     "김창균": 1,
     "유주원": 2,
-    "이석주": 1,
     "황우형": 1,
     "윤대의": 1,
     "임상훈": 1,
