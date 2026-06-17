@@ -1,9 +1,9 @@
 {
-  "synced_at": "2026-06-17 07:47 KST",
+  "synced_at": "2026-06-17 09:09 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 152,
-  "done": 115,
+  "done": 116,
   "done_rate": 76,
   "overdue_count": 8,
   "tasks": [
@@ -260,8 +260,8 @@
       "assignee": "",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "todo",
+      "completed": true,
+      "status": "done",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215000178834255",
       "is_subtask": true,
@@ -1985,19 +1985,6 @@
     }
   ],
   "no_assignee": [
-    {
-      "gid": "1215000178834255",
-      "title": "↳ [TW_0526][v3.0_0625A] IAP OFFER CODE 연동 작업 디테일업",
-      "assignee": "",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "서비스 연동 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1208951372623199/task/1215000178834255",
-      "is_subtask": true,
-      "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
-    },
     {
       "gid": "1214343698463900",
       "title": "대만 런칭 영상 작업",
