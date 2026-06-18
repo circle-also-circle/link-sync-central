@@ -1,8 +1,8 @@
 {
-  "synced_at": "2026-06-18 14:28 KST",
+  "synced_at": "2026-06-18 19:05 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 153,
+  "total": 154,
   "done": 120,
   "done_rate": 78,
   "overdue_count": 8,
@@ -797,6 +797,19 @@
       "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215042128456164",
+      "is_subtask": true,
+      "parent_title": "[TW_0526] 연인 관계 의상 연출 기능 구현"
+    },
+    {
+      "gid": "1215824780464088",
+      "title": "↳ [TW] 연인 관계 의상 연출 기능 구현 - FX",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/task/1215824780464088",
       "is_subtask": true,
       "parent_title": "[TW_0526] 연인 관계 의상 연출 기능 구현"
     },
@@ -2036,6 +2049,19 @@
       "url": "https://app.asana.com/1/1199095400125716/task/1214343698463907",
       "is_subtask": true,
       "parent_title": "대만 런칭 영상 작업"
+    },
+    {
+      "gid": "1215824780464088",
+      "title": "↳ [TW] 연인 관계 의상 연출 기능 구현 - FX",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "글로벌 라전팀 담당 작업",
+      "url": "https://app.asana.com/1/1199095400125716/task/1215824780464088",
+      "is_subtask": true,
+      "parent_title": "[TW_0526] 연인 관계 의상 연출 기능 구현"
     },
     {
       "gid": "1215153249817948",
