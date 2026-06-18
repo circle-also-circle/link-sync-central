@@ -1,9 +1,9 @@
 {
-  "synced_at": "2026-06-18 09:07 KST",
+  "synced_at": "2026-06-18 14:28 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 152,
-  "done": 119,
+  "total": 153,
+  "done": 120,
   "done_rate": 78,
   "overdue_count": 8,
   "tasks": [
@@ -277,6 +277,19 @@
       "status": "done",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215042042749803",
+      "is_subtask": true,
+      "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
+    },
+    {
+      "gid": "1215821128986371",
+      "title": "↳ [QA] KR 3.0 Offer Code 상품 테스트 요청",
+      "assignee": "이지수",
+      "due_on": "",
+      "start_on": "",
+      "completed": true,
+      "status": "done",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1210971355177203/task/1215821128986371",
       "is_subtask": true,
       "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
     },
