@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-22 11:47 KST",
+  "synced_at": "2026-06-22 17:49 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 156,
-  "done": 126,
+  "done": 127,
   "done_rate": 81,
-  "overdue_count": 6,
+  "overdue_count": 5,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -780,8 +780,8 @@
       "assignee": "김창균",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1213916138762274",
       "is_subtask": true,
@@ -829,11 +829,11 @@
     {
       "gid": "1215824780464088",
       "title": "↳ [TW] 연인 관계 의상 - FX",
-      "assignee": "",
+      "assignee": "서상원",
       "due_on": "2026-06-26",
       "start_on": "2026-06-22",
       "completed": false,
-      "status": "todo",
+      "status": "progress",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1199521714452518/task/1215824780464088",
       "is_subtask": true,
@@ -2077,19 +2077,6 @@
       "parent_title": "대만 런칭 영상 작업"
     },
     {
-      "gid": "1215824780464088",
-      "title": "↳ [TW] 연인 관계 의상 - FX",
-      "assignee": "",
-      "due_on": "2026-06-26",
-      "start_on": "2026-06-22",
-      "completed": false,
-      "status": "todo",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1199521714452518/task/1215824780464088",
-      "is_subtask": true,
-      "parent_title": "[TW_0526] 연인 관계 의상 연출 기능 구현"
-    },
-    {
       "gid": "1215153249817948",
       "title": "↳ 전설 패션/펫 천장 재화 소급 제공 관련 데이터 요청 - NK실",
       "assignee": "",
@@ -2144,19 +2131,6 @@
       "parent_title": ""
     },
     {
-      "gid": "1213916138762274",
-      "title": "↳ [TW] 연인 관계 의상 연출 기능 구현 - 로직1",
-      "assignee": "김창균",
-      "due_on": "2026-05-26",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1199106425359852/task/1213916138762274",
-      "is_subtask": true,
-      "parent_title": "[TW_0526] 연인 관계 의상 연출 기능 구현"
-    },
-    {
       "gid": "1213742032011214",
       "title": "[TW_0526] 넥슨 나우 글로벌 실측 확률 연동 작업",
       "assignee": "황우형",
@@ -2202,7 +2176,7 @@
     "신민지": 2,
     "현승은": 7,
     "이지수": 2,
-    "김창균": 1,
+    "서상원": 1,
     "유주원": 2,
     "황우형": 1,
     "윤대의": 1,
