@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-23 19:27 KST",
+  "synced_at": "2026-06-23 22:36 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 156,
-  "done": 128,
-  "done_rate": 82,
-  "overdue_count": 5,
+  "done": 131,
+  "done_rate": 84,
+  "overdue_count": 4,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -1014,8 +1014,8 @@
       "assignee": "윤대의",
       "due_on": "2026-05-26",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1212511675694495",
       "is_subtask": false,
@@ -1170,10 +1170,10 @@
       "assignee": "",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "todo",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1215153249817948",
+      "url": "https://app.asana.com/1/1199095400125716/project/1213545604319992/task/1215153249817948",
       "is_subtask": true,
       "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
     },
@@ -1404,8 +1404,8 @@
       "assignee": "",
       "due_on": "",
       "start_on": "",
-      "completed": false,
-      "status": "todo",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1210555393097092/task/1213917117417740",
       "is_subtask": true,
@@ -2075,32 +2075,6 @@
       "url": "https://app.asana.com/1/1199095400125716/task/1214343698463907",
       "is_subtask": true,
       "parent_title": "대만 런칭 영상 작업"
-    },
-    {
-      "gid": "1215153249817948",
-      "title": "↳ 전설 패션/펫 천장 재화 소급 제공 관련 데이터 요청 - NK실",
-      "assignee": "",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/task/1215153249817948",
-      "is_subtask": true,
-      "parent_title": "[v3.0_0625A] 패션/펫 천장 구조 기획"
-    },
-    {
-      "gid": "1213917117417740",
-      "title": "↳ [레벨디자인팀][배경] 던바튼 야시장 컨셉 레벨 제작 요청",
-      "assignee": "",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1210555393097092/task/1213917117417740",
-      "is_subtask": true,
-      "parent_title": "[TW] 던바튼 야시장 컨셉 레벨 제작 아트 요청"
     }
   ],
   "overdue": [
@@ -2144,19 +2118,6 @@
       "parent_title": ""
     },
     {
-      "gid": "1212511675694495",
-      "title": "[v3.0_0625A] 패션/펫 천장 구조 기획",
-      "assignee": "윤대의",
-      "due_on": "2026-05-26",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1210960244986032/task/1212511675694495",
-      "is_subtask": false,
-      "parent_title": ""
-    },
-    {
       "gid": "1214993761714745",
       "title": "[TW0722] 대만 주단위 업데이트 데이터 작업 - 퀘스트 및 아르바이트 관련 작업",
       "assignee": "임상훈",
@@ -2179,7 +2140,6 @@
     "서상원": 1,
     "유주원": 2,
     "황우형": 1,
-    "윤대의": 1,
     "임상훈": 1,
     "황인진": 1
   },
