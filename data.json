@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-24 23:06 KST",
+  "synced_at": "2026-06-25 01:58 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 156,
   "done": 139,
   "done_rate": 89,
-  "overdue_count": 3,
+  "overdue_count": 4,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -495,7 +495,7 @@
       "due_on": "2026-06-24",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "overdue",
       "section": "마케팅 관련",
       "url": "https://app.asana.com/1/1199095400125716/task/1214343698463906",
       "is_subtask": true,
@@ -2057,7 +2057,7 @@
       "due_on": "2026-06-24",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "overdue",
       "section": "마케팅 관련",
       "url": "https://app.asana.com/1/1199095400125716/task/1214343698463906",
       "is_subtask": true,
@@ -2090,6 +2090,19 @@
       "url": "https://app.asana.com/1/1199095400125716/project/1209361338030462/task/1214210652658296",
       "is_subtask": true,
       "parent_title": "[TW_0526] IAP OFFER CODE 연동 작업 요청"
+    },
+    {
+      "gid": "1214343698463906",
+      "title": "↳ 대만 사전 예약 영상",
+      "assignee": "",
+      "due_on": "2026-06-24",
+      "start_on": "",
+      "completed": false,
+      "status": "overdue",
+      "section": "마케팅 관련",
+      "url": "https://app.asana.com/1/1199095400125716/task/1214343698463906",
+      "is_subtask": true,
+      "parent_title": "대만 런칭 영상 작업"
     },
     {
       "gid": "1213826373013136",
