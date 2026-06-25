@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-25 16:33 KST",
+  "synced_at": "2026-06-25 19:33 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 156,
-  "done": 141,
-  "done_rate": 90,
-  "overdue_count": 4,
+  "done": 142,
+  "done_rate": 91,
+  "overdue_count": 3,
   "tasks": [
     {
       "gid": "1214287009807248",
@@ -520,8 +520,8 @@
       "assignee": "신민지",
       "due_on": "2026-04-27",
       "start_on": "",
-      "completed": false,
-      "status": "overdue",
+      "completed": true,
+      "status": "done",
       "section": "글로벌 라전팀 담당 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213826373013136",
       "is_subtask": false,
@@ -2105,19 +2105,6 @@
       "parent_title": "대만 런칭 영상 작업"
     },
     {
-      "gid": "1213826373013136",
-      "title": "[TW_0427] 피처 스위치 ON/OFF",
-      "assignee": "신민지",
-      "due_on": "2026-04-27",
-      "start_on": "",
-      "completed": false,
-      "status": "overdue",
-      "section": "글로벌 라전팀 담당 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1213536322471876/task/1213826373013136",
-      "is_subtask": false,
-      "parent_title": ""
-    },
-    {
       "gid": "1214993761714745",
       "title": "[TW0722] 대만 주단위 업데이트 데이터 작업 - 퀘스트 및 아르바이트 관련 작업",
       "assignee": "임상훈",
@@ -2134,7 +2121,6 @@
   "owner_counts": {
     "원도환": 4,
     "권혁인": 1,
-    "신민지": 1,
     "이지수": 2,
     "현승은": 1,
     "유주원": 1,
