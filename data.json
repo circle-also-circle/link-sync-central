@@ -1,10 +1,10 @@
 {
-  "synced_at": "2026-06-26 15:43 KST",
+  "synced_at": "2026-06-26 19:14 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
-  "total": 156,
+  "total": 157,
   "done": 142,
-  "done_rate": 91,
+  "done_rate": 90,
   "overdue_count": 3,
   "tasks": [
     {
@@ -342,6 +342,19 @@
       "status": "done",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1214245506150899/task/1214345454495782",
+      "is_subtask": false,
+      "parent_title": ""
+    },
+    {
+      "gid": "1216065028727514",
+      "title": "미디어 시연회 빌드 대역 검토 요청",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1199107203366495/task/1216065028727514",
       "is_subtask": false,
       "parent_title": ""
     },
@@ -2037,6 +2050,19 @@
     }
   ],
   "no_assignee": [
+    {
+      "gid": "1216065028727514",
+      "title": "미디어 시연회 빌드 대역 검토 요청",
+      "assignee": "",
+      "due_on": "",
+      "start_on": "",
+      "completed": false,
+      "status": "todo",
+      "section": "서비스 연동 작업",
+      "url": "https://app.asana.com/1/1199095400125716/project/1199107203366495/task/1216065028727514",
+      "is_subtask": false,
+      "parent_title": ""
+    },
     {
       "gid": "1214343698463900",
       "title": "대만 런칭 영상 작업",
