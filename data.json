@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-01 12:45 KST",
+  "synced_at": "2026-07-01 17:03 KST",
   "project_name": "대만 런칭 작업 목록",
   "project_due": null,
   "total": 157,
@@ -348,11 +348,11 @@
     {
       "gid": "1216065028727514",
       "title": "미디어 시연회 빌드 대역 검토 요청",
-      "assignee": "",
+      "assignee": "최인",
       "due_on": "",
       "start_on": "",
       "completed": false,
-      "status": "todo",
+      "status": "progress",
       "section": "서비스 연동 작업",
       "url": "https://app.asana.com/1/1199095400125716/project/1199107203366495/task/1216065028727514",
       "is_subtask": false,
@@ -2051,19 +2051,6 @@
   ],
   "no_assignee": [
     {
-      "gid": "1216065028727514",
-      "title": "미디어 시연회 빌드 대역 검토 요청",
-      "assignee": "",
-      "due_on": "",
-      "start_on": "",
-      "completed": false,
-      "status": "todo",
-      "section": "서비스 연동 작업",
-      "url": "https://app.asana.com/1/1199095400125716/project/1199107203366495/task/1216065028727514",
-      "is_subtask": false,
-      "parent_title": ""
-    },
-    {
       "gid": "1214343698463900",
       "title": "대만 런칭 영상 작업",
       "assignee": "",
@@ -2147,6 +2134,7 @@
   "owner_counts": {
     "원도환": 4,
     "권혁인": 1,
+    "최인": 1,
     "이지수": 2,
     "현승은": 1,
     "유주원": 1,
